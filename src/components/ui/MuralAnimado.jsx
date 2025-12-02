@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import textura_mural from "/textura-mural6.svg";
+import textura_mural from "/textura-mural.svg";
 
 const MuralAnimado = ({ direction }) => {
   return (
