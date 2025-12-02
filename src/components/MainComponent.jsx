@@ -8,7 +8,7 @@ const MainComponent = () => {
   return (
     <main className="flex flex-col min-h-screen text-center justify-center md:items-center">
       <div
-        className="m-1 border-[40px] flex flex-col items-center justify-center gap-3 min-h-screen md:min-h-[80vh] md:max-w-[900px] md:border-[60px] md:gap-6 md:min-w-[135vh]"
+        className="m-1 border-[40px] flex flex-col items-center justify-center gap-3 min-h-screen md:min-h-[80vh] md:max-w-[900px] md:border-[60px] md:gap-6 md:min-w-[125vh]"
         id="borderimg3"
       >
         {/* LOGO GRANDE */}
@@ -26,9 +26,9 @@ const MainComponent = () => {
 
         {/* CONTACTOS */}
         <div className="flex flex-row justify-center items-center gap-5 mt-5 md:gap-10 md:mt-10">
-          <a href="https://wa.me/543834091942"><AiOutlineWhatsApp className="w-18 h-18 md:w-14 md:h-14" /></a>
-          <a href="instagram://user?username=patrician-software/"><FaInstagram className="w-18 h-18 md:w-14 md:h-14" /></a>
-          <a href="mailto:services@patrician-software.com/"><AiOutlineMail className="w-18 h-18 md:w-14 md:h-14" /></a>
+          <a aria-label="Contactar a Patrician Software por Whatsapp" className="cursor-pointer hover:scale-125 transition-all" href="https://wa.me/543834091942"><AiOutlineWhatsApp className="w-18 h-18 md:w-14 md:h-14" /></a>
+          <a aria-label="Visitar a Patrician Software en Instagram" className="cursor-pointer hover:scale-125 transition-all" href="instagram://user?username=patrician-software/"><FaInstagram className="w-18 h-18 md:w-14 md:h-14" /></a>
+          <a aria-label="Contactar a Patrician Software por e-Mail" className="cursor-pointer hover:scale-125 transition-all" href="mailto:services@patrician-software.com/"><AiOutlineMail className="w-18 h-18 md:w-14 md:h-14" /></a>
         </div>
 
         <p className="text-1xl italic md:text-2xl md:mt-4">Contáctenos</p>
