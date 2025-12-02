@@ -13,8 +13,8 @@ const MainComponent = () => {
       >
         {/* LOGO GRANDE */}
         <div className="grid place-items-center md:scale-125 md:mb-4">
-          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_text} alt="Logo Texto" />
-          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_laurel} alt="Logo Laurel" />
+          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_text} draggable="false" alt="Logo Texto" />
+          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_laurel} draggable="false" alt="Logo Laurel" />
         </div>
 
         {/* TITULOS & SUBTITULO */}
