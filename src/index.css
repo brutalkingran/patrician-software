@@ -25,4 +25,9 @@
   html {
     font-family: sans-serif;
   }
+
+  #borderimg3 {
+    border-image-source: url(texture.svg);
+    border-image-slice: 30;
+  }
 }
