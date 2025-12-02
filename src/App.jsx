@@ -1,9 +1,9 @@
-import MainComponent from "./components/MainComponent"
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
     <>
-      <MainComponent/>
+      <AppRouter />
     </>
   )
 }
