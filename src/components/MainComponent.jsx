@@ -3,12 +3,20 @@ import logo_laurel from "/logo_laurel.png";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
+import MuralAnimado from "./ui/MuralAnimado";
 
 const MainComponent = () => {
   return (
     <main className="flex flex-col min-h-screen text-center justify-center md:items-center">
+      {/* mural */}
+      <div className="hidden md:block">
+        <MuralAnimado direction="left-20" />
+        <MuralAnimado direction="right-20" />
+      </div>
+
+      {/* CONTENIDO */}
       <div
-        className="m-1 border-[40px] flex flex-col items-center justify-center gap-3 min-h-screen md:min-h-[80vh] md:max-w-[900px] md:border-[60px] md:gap-6 md:min-w-[125vh]"
+        className="m-1 border-[40px] flex flex-col items-center justify-center gap-3 min-h-screen md:min-h-[80vh] md:max-w-[120vh] md:border-[60px] md:gap-6 md:min-w-[100vh]"
         id="borderimg3"
       >
         {/* LOGO GRANDE */}
@@ -31,7 +39,7 @@ const MainComponent = () => {
           <a aria-label="Contactar a Patrician Software por e-Mail" className="cursor-pointer hover:scale-125 transition-all" href="mailto:services@patrician-software.com/"><AiOutlineMail className="w-18 h-18 md:w-14 md:h-14" /></a>
         </div>
 
-        <p className="text-1xl italic md:text-2xl md:mt-4">Contáctenos</p>
+        <p className="text-1xl italic md:text-xl md:mt-0">Contáctenos</p>
       </div>
     </main>
   )
