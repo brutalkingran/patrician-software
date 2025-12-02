@@ -1,29 +1,25 @@
-import logo_text from "/logo_text.png";
-import logo_laurel from "/logo_laurel.png";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import MuralAnimado from "./ui/MuralAnimado";
+import LogoAnimado from "./ui/LogoAnimado";
 
 const MainComponent = () => {
   return (
     <main className="flex flex-col min-h-screen text-center justify-center md:items-center">
-      {/* mural */}
+      {/* MURAL */}
       <div className="hidden md:block">
         <MuralAnimado direction="left-20" />
         <MuralAnimado direction="right-20" />
       </div>
 
-      {/* CONTENIDO */}
+      {/* INICIO */}
       <div
         className="m-1 border-[40px] flex flex-col items-center justify-center gap-3 min-h-screen md:min-h-[80vh] md:max-w-[120vh] md:border-[60px] md:gap-6 md:min-w-[100vh]"
         id="borderimg3"
       >
-        {/* LOGO GRANDE */}
-        <div className="grid place-items-center md:scale-125 md:mb-4">
-          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_text} draggable="false" alt="Logo Texto" />
-          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_laurel} draggable="false" alt="Logo Laurel" />
-        </div>
+        {/* LOGO  */}
+        <LogoAnimado />
 
         {/* TITULOS & SUBTITULO */}
         <h1 className="text-4xl font-serif font-light md:text-6xl">Patrician Software</h1>
