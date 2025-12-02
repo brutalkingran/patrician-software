@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const MainComponent = () => {
   return (
-    <main className="flex flex-col w-screen h-screen text-center justify-center">
+    <main className="flex flex-col min-h-screen text-center justify-center">
       <div className="m-1 h-screen border-40 flex flex-col items-center justify-center gap-6" id="borderimg3">
         {/* LOGO GRANDE */}
         <div className="grid place-items-center">
