@@ -5,6 +5,7 @@
 
 @theme {
   --color-ps-blue: oklch(0.225 0.066 257.39);
+  --color-ps-mblue: oklch(0.2178 0.0401 251.43);
   --color-ps-white: oklch(0.979 0.003 247.87);
 }
 
@@ -27,7 +28,7 @@
   }
 
   #borderimg3 {
-    border-image-source: url(texture.svg);
+    border-image-source: url(/texture.svg);
     border-image-slice: 30;
   }
 }
