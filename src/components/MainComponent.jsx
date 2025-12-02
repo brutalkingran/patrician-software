@@ -6,29 +6,32 @@ import { FaInstagram } from "react-icons/fa";
 
 const MainComponent = () => {
   return (
-    <main className="flex flex-col min-h-screen text-center justify-center">
-      <div className="m-1 border-[40px] flex flex-col items-center justify-center gap-6" id="borderimg3">
+    <main className="flex flex-col min-h-screen text-center justify-center md:items-center">
+      <div
+        className="m-1 border-[40px] flex flex-col items-center justify-center gap-3 min-h-screen md:min-h-[80vh] md:max-w-[900px] md:border-[60px] md:gap-6 md:min-w-[135vh]"
+        id="borderimg3"
+      >
         {/* LOGO GRANDE */}
-        <div className="grid place-items-center">
-          <img className="col-start-1 row-start-1" src={logo_text} alt="Texto de logo de Patrician Software" />
-          <img className="col-start-1 row-start-1" src={logo_laurel} alt="Laurel de logo de Patrician Software" />
+        <div className="grid place-items-center md:scale-125 md:mb-4">
+          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_text} alt="Logo Texto" />
+          <img className="col-start-1 row-start-1 md:w-[350px]" src={logo_laurel} alt="Logo Laurel" />
         </div>
 
-        <div className="flex flex-col items-center justify-center">
-          {/* TÍTULO */}
-          <h1 className="text-[2.5rem] text-center font-extralight font-serif">Patrician Software</h1>
+        {/* TITULOS & SUBTITULO */}
+        <h1 className="text-4xl font-serif font-light md:text-6xl">Patrician Software</h1>
 
-          {/* SUBTÍTULO */}
-          <h2 className="text-[1.1rem] mx-6 text-center italic font-extralight">Expertos en Desarrollo de Software y Marketing Digital</h2>
+        <h2 className="text-lg italic font-extralight mx-6 md:text-2xl md:max-w-[70%]">
+          Expertos en Desarrollo de Software y Marketing Digital
+        </h2>
+
+        {/* CONTACTOS */}
+        <div className="flex flex-row justify-center items-center gap-5 mt-5 md:gap-10 md:mt-10">
+          <a href="https://wa.me/543834091942"><AiOutlineWhatsApp className="w-18 h-18 md:w-14 md:h-14" /></a>
+          <a href="instagram://user?username=patrician-software/"><FaInstagram className="w-18 h-18 md:w-14 md:h-14" /></a>
+          <a href="mailto:services@patrician-software.com/"><AiOutlineMail className="w-18 h-18 md:w-14 md:h-14" /></a>
         </div>
 
-        <div className="flex flex-row justify-center items-center gap-5 mt-5">
-          <a href="https://wa.me/543834091942"><AiOutlineWhatsApp className="w-18 h-18" /></a>
-          <a href="instagram://user?username=patrician-software/"><FaInstagram className="w-18 h-18" /></a>
-          <a href="mailto:services@patrician-software.com/"><AiOutlineMail className="w-18 h-18" /></a>
-        </div>
-
-        <p className="text-center text-1xl italic">Contáctenos</p>
+        <p className="text-1xl italic md:text-2xl md:mt-4">Contáctenos</p>
       </div>
     </main>
   )
