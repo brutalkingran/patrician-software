@@ -4,15 +4,15 @@ import textura_mural from "/textura-mural.svg";
 const MuralAnimado = ({ direction }) => {
   return (
     <motion.div
-      className={`absolute top-0 ${ direction } w-32 h-full bg-repeat-y bg-center bg-contain`}
+      className={`absolute top-0 ${ direction } w-24 h-full bg-repeat-y bg-center bg-contain`}
       style={{
         backgroundImage: `url(${textura_mural})`
       }}
       animate={{
-        backgroundPositionY: ["0%", "100%"]
+        backgroundPositionY: ["0%", "120%"]
       }}
       transition={{
-        duration: 25,
+        duration: 20,
         ease: "linear",
         repeat: Infinity,
       }}
