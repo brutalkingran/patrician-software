@@ -1,0 +1,1 @@
+export const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID
