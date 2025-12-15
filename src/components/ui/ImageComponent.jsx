@@ -4,12 +4,12 @@ const ImageComponent = ({ imgSrc, alt, title, description }) => {
       role="group"
       className="
         relative flex-shrink-0 w-[100%] md:w-full
-        aspect-[3/1]
+        aspect-[2/1]
         snap-start overflow-hidden rounded-3xl
       "
     >
       {/* TITULO PROYECTO */}
-      { title }
+      <h3>{ title }</h3>
 
       {/* IMAGEN DEL PRODUCTO */}
       <img

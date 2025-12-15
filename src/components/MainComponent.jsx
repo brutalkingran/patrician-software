@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import MuralAnimado from "./ui/MuralAnimado";
 import LogoAnimado from "./ui/LogoAnimado";
 
+
 const MainComponent = () => {
   return (
     <main className="flex flex-col min-h-screen text-center justify-center md:items-center">

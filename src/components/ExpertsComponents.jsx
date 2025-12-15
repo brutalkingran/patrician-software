@@ -10,7 +10,7 @@ const ExpertsComponents = () => {
         Olvídese de sitios web abandonados o community managers que no muestran crecimiento.
       </p>
 
-      <p className="mt-3">
+      <p className="my-3">
         <strong>Patrician Software</strong> aspira a aprovechar todas y cada una de las herramientas que la web nos deja a disposición:
       </p>
 
@@ -31,7 +31,7 @@ const ExpertsComponents = () => {
           Abarcamos público angloparlante
         </li>
         <li>
-          ¿Te mencionamos algo más? Deja que nuestros proyectos hablen por nosotros
+          ¿Algo más? Dejá que nuestros proyectos hablen por nosotros
         </li>
       </ul>
 
