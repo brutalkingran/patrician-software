@@ -23,15 +23,15 @@ const ChosenUsComponent = () => {
         <motion.div
           className="flex items-center gap-16 grayscale opacity-80"
           animate={{
-            x: ["0%", "-50%"],
+            x: ["0%", "-51%"],
           }}
           transition={{
-            duration: 5,
+            duration: 20,
             ease: "linear",
             repeat: Infinity,
           }}
         >
-          {[...logos, ...logos].map((logo, index) => (
+          {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
             <img
               key={index}
               src={logo}
