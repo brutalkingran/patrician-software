@@ -35,16 +35,6 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
     });
   };
 
-  useEffect(() => {
-    if (!onScreen || canceled) return;
-
-    const interval = setInterval(() => {
-      onChangePage(1);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, [onScreen, canceled, currentPage]);
-
   return (
     <motion.div
       className={`relative items-center justify-center w-full max-w-4xl aspect-3/1 mx-auto ${extraStyle}`}
@@ -56,16 +46,16 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
       {items.length > 1 && (
         <>
           <IoIosArrowBack
-            className="absolute left-4 top-1/2 -translate-y-1/2
+            className="absolute left-1 top-1/2 -translate-y-1/2
              cursor-pointer hover:scale-110 transition-all z-20
-             bg-[#f5f5f5]/80 p-1 rounded-full
+             bg-ps-white/80 p-1 rounded-full
              md:w-10 md:h-10 w-8 h-8"
             onClick={() => onChangePage(-1, true)}
             color="#1a1a1a"
           />
 
           <IoIosArrowForward
-            className="absolute right-4 top-1/2 -translate-y-1/2
+            className="absolute right-1 top-1/2 -translate-y-1/2
             cursor-pointer hover:scale-110 transition-all z-20
             bg-[#f5f5f5]/80 p-1 rounded-full
             md:w-10 md:h-10 w-8 h-8"
@@ -74,7 +64,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
           />
 
           {/* Dots */}
-          <div className="absolute bottom-1/3 left-1/2 -translate-x-1/2 translate-y-20 flex gap-2 z-20">
+          <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-20 flex gap-2 z-20">
             {items.map((_, index) => (
               <button
                 key={index}
@@ -84,7 +74,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
                   setCurrentPage(index);
                 }}
                 className={`
-              w-3 h-3 rounded-full transition-all duration-300 shadow-[#1a1a1a] cursor-pointer shadow-[0.9px_1px_1px_rgb(0_0_0_/_1)]
+              w-3 h-3 rounded-full transition-all duration-300 shadow-[#1a1a1a] cursor-pointer
               ${currentPage === index ? "bg-gray-400 scale-125" : "bg-gray-300 hover:bg-gray-500"}
             `}
               />
@@ -97,7 +87,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
       <AnimatePresence custom={direction} mode="wait">
         <motion.div
           key={currentPage}
-          className="absolute w-full h-full"
+          className="w-full"
           custom={direction}
           variants={variants}
           initial="enter"

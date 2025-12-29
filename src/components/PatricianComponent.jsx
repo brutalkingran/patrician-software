@@ -1,6 +1,6 @@
 const PatricianComponent = () => {
   return (
-    <section className="pl-3 py-4 h-[30vh] flex flex-col items-center justify-center">
+    <section className="pl-3 h-[30vh] flex flex-col items-center justify-center">
       <dl className="md:max-w-full border-l-3 border-white-800 pl-2">
         <dt className="text-2xl font-serif font-semibold tracking-wide">
           Patrician <span className="italic text-sm">(sust.)</span>
