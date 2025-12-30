@@ -37,7 +37,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
 
   return (
     <motion.div
-      className={`relative items-center justify-center w-full max-w-4xl aspect-3/1 mx-auto ${extraStyle}`}
+      className={`relative items-center justify-center w-full max-w-4xl aspect-3/1 mx-auto ${extraStyle} cool-texture [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]`}
       viewport={{ margin: "0px" }}
       onViewportEnter={() => setOnScreen(true)}
       onViewportLeave={() => setOnScreen(false)}
@@ -46,7 +46,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
       {items.length > 1 && (
         <>
           <IoIosArrowBack
-            className="absolute left-1 top-1/2 -translate-y-1/2
+            className="absolute left-13 top-1/2 -translate-y-1/2
              cursor-pointer hover:scale-110 transition-all z-20
              bg-ps-white/80 p-1 rounded-full
              md:w-10 md:h-10 w-8 h-8"
@@ -55,7 +55,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
           />
 
           <IoIosArrowForward
-            className="absolute right-1 top-1/2 -translate-y-1/2
+            className="absolute right-13 top-1/2 -translate-y-1/2
             cursor-pointer hover:scale-110 transition-all z-20
             bg-[#f5f5f5]/80 p-1 rounded-full
             md:w-10 md:h-10 w-8 h-8"
@@ -64,7 +64,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
           />
 
           {/* Dots */}
-          <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-20 flex gap-2 z-20">
+          <div className="absolute bottom-1/6 left-1/2 -translate-x-1/2 translate-y-0 flex gap-2 z-20">
             {items.map((_, index) => (
               <button
                 key={index}

@@ -9,7 +9,7 @@ const MainComponent = () => {
   return (
     <main className="flex flex-col text-center justify-center md:items-center">
       {/* MURAL ANIMADO */}
-      <div className="hidden md:block">
+      <div className="hidden xl:block">
         <MuralAnimado direction="left-20" />
         <MuralAnimado direction="right-20" />
       </div>
@@ -30,7 +30,7 @@ const MainComponent = () => {
         </h2>
 
         {/* CONTACTOS */}
-        <div className="flex flex-row justify-center items-center gap-5 mt-5 md:gap-10 md:mt-10 border-3 border-double rounded-2xl p-3">
+        <div className="flex flex-row justify-center items-center gap-5 mt-5 md:gap-10 md:mt-10 border-3 border-double rounded-2xl p-3 cool-texture">
           <a target="_blank" rel="noopener noreferrer" aria-label="Contactar a Patrician Software por Whatsapp" className="cursor-pointer hover:scale-125 transition-all" href="https://wa.me/543834091942"><AiOutlineWhatsApp className="w-18 h-18 md:w-14 md:h-14" /></a>
           <a target="_blank" rel="noopener noreferrer" aria-label="Visitar a Patrician Software en Instagram" className="cursor-pointer hover:scale-125 transition-all" href="https://www.instagram.com/patrician.mkt?igsh=N3VtbGhydTRqdzNi"><FaInstagram className="w-18 h-18 md:w-14 md:h-14" /></a>
           <a target="_blank" rel="noopener noreferrer" aria-label="Contactar a Patrician Software por e-Mail" className="cursor-pointer hover:scale-125 transition-all" href="mailto:services@patrician-software.com/"><AiOutlineMail className="w-18 h-18 md:w-14 md:h-14" /></a>

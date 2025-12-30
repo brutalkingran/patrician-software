@@ -6,9 +6,12 @@ export const Title = ({ text }) => {
       font-serif
       tracking-wide
       text-center
-      bg-[#909772]
       text-ps-white
-    ">
+      md:p-6
+      md:rounded-2xl
+    "
+    id="wood-texture"
+    >
       { text }
     </h2>
   )

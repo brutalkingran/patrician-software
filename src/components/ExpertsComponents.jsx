@@ -7,11 +7,9 @@ const ExpertsComponents = () => {
     <section className="
       flex flex-col 
       justify-center
-      md:w-1/2 
+      md:w-1/2
       mx-auto
       space-y-8
-      pt-5
-      mt-5
     ">
       <Title text="Expertos en la Excelencia"/>
       <Subtitle text="Olvídese de sitios web abandonados o Community Managers que no muestran progreso." />
@@ -46,14 +44,16 @@ const ExpertsComponents = () => {
 
         <FigureSweepComponent>
           <ImageComponent
-            imgSrc={"/img/cartx.webp"}
+            imgSrcMbl={"/img/electro_m.jpg"}
+            imgSrcDsktp={"/img/electro_d.png"}
             title={"Tu nuevo e-Commerce"}
             alt={"e-commerce"}
             link={"https://google.com"}
             description={"Comprar en tu emprendimiento jamás había sido tan conveniente."}
           />
           <ImageComponent
-            imgSrc={"/img/cartx.webp"}
+            imgSrcMbl={"/img/electro_m.jpg"}
+            imgSrcDsktp={"/img/electro_d.png"}
             title={"Aaaa"}
             alt={"A"}
             link={"https://google.com"}

@@ -1,4 +1,4 @@
-const ImageComponent = ({ imgSrc, alt, title, description, link }) => {
+const ImageComponent = ({ imgSrcMbl, imgSrcDsktp, alt, title, description, link }) => {
   return (
     <figure
       role="group"
@@ -33,31 +33,54 @@ const ImageComponent = ({ imgSrc, alt, title, description, link }) => {
           cursor-pointer
         "
       >
-        <img
-          src={imgSrc}
-          alt={alt}
-          className="
-            object-contain
-            max-w-full
-            select-none
-          "
-          draggable="false"
-        />
+        {
+          window.innerWidth < 1280
+          ?
+            <img
+              src={imgSrcMbl}
+              alt={alt}
+              className="
+                object-contain
+                max-w-full
+                select-none
+                w-50
+                rounded
+              "
+              draggable="false"
+            />
+          :
+            <img
+              src={imgSrcDsktp}
+              alt={alt}
+              className="
+                object-contain
+                max-w-full
+                select-none
+                w-175
+                rounded
+              "
+              draggable="false"
+            />
+        }
+        
       </a>
 
-      {/* TEXTO DEL BANNER */}
-      <figcaption className="
-        text-sm
-        italic
-        text-center
-        mt-2
-      ">
-        {description}
-        <br />
-        <span className="text-xs opacity-80">
-          Clickeá en la imagen para ver el proyecto a detalle.
-        </span>
-      </figcaption>
+      <div className="mt-10">
+        {/* TEXTO DEL BANNER */}
+        <figcaption className="
+          text-sm
+          italic
+          text-center
+          mt-2
+        ">
+          {description}
+          <br />
+          {/* VER PROYECTO */}
+          <span className="text-xs opacity-80">
+            Clickeá en la imagen para ver el proyecto a detalle.
+          </span>
+        </figcaption>
+      </div>
     </figure>
   );
 };

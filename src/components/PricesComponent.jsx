@@ -1,15 +1,13 @@
 const PricesComponent = () => {
   return (
-    <section className="flex flex-col items-center justify-center h-screen">
-      <hr />
-
-      <h3>
+    <section className="flex flex-col mx-auto justify-center md:w-2/4 mt-5">
+      <p className="text-2xl text-center">
         ¿Qué estás esperando?
-      </h3>
+      </p>
 
-      <a className="mt-5 w-full h-60 text-center p-4 bg-radial-[at_25%_25%] from-red-400 to-red-800 to-75% cursor-pointer font-stretch-50% text-2xl text-[#F6FFBF] font-serif" >
-        LLEVA TU NEGOCIO AL SIGUIENTE NIVEL
-      </a>
+      <button className="mt-8 md:rounded-4xl w-full h-60 text-center p-4 cursor-pointer font-stretch-50% text-2xl text-[#F6FFBF] font-serif cool-texture" >
+        CLICKEÁ AQUÍ PARA LLEVAR TU NEGOCIO AL SIGUIENTE NIVEL
+      </button>
     </section>
   );
 }
