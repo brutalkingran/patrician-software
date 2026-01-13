@@ -1,7 +1,7 @@
 export const Title = ({ text }) => {
   return (
     <h2 className="
-      text-[3rem]
+      text-[3rem]/13
       md:text-4xl 
       font-serif
       tracking-wide

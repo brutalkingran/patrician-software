@@ -3,7 +3,7 @@ import PlanCard from "../components/ui/PlanCard"
 const PlanPage = () => {
   return (
     <section className="bg-ps-blue px-4 py-10 h-min-screen">
-      <h2 className="text-2xl font-bold text-center mb-2">
+      <h2 className="text-3xl/8 font-bold text-center mb-2">
         Planes pensados para tu negocio
       </h2>
       <p className="text-center text-sm opacity-80 mb-8">
