@@ -4,7 +4,7 @@ const QuestionComponent = ({ onAnswer, question, Qname }) => {
   return (
     <section className="w-full flex-shrink-0 p-2 bg-slate-700 rounded skew-2 py-6">
       <div className="-skew-1">
-        <h2 className="text-xl mb-6 italic opacity-70">"{question}"</h2>
+        <h2 className="text-xl mb-6 italic opacity-70 text-center">"{question}"</h2>
 
         <div className="flex justify-between mb-5 items-center">
           {options.map((value) => {
