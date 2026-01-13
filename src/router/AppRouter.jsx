@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router";
 // import ForbiddenPage from "../pages/ForbiddenPage";
 import MainPage from "../pages/MainPage";
 import ClientFormPage from "../pages/ClientFormPage";
+import PlanPage from "../pages/PlanPage";
 
 const AppRouter = () => {
   return (
@@ -13,6 +14,7 @@ const AppRouter = () => {
       {/* <Route path="about" element={<About />} /> */}
       {/* <Route path="contact" element={<Contact />} /> */}
       <Route path="test" element={<ClientFormPage />} />
+      <Route path="planes" element={<PlanPage />} />
 
       {/* Redirects */}
       {/* <Route path="not-found" element={<NotFound />} /> */}
