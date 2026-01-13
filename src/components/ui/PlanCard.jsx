@@ -1,4 +1,4 @@
-import React from 'react'
+import { FaCheck } from "react-icons/fa";
 
 const PlanCard = ({
   title,
@@ -34,7 +34,7 @@ const PlanCard = ({
       <ul className="flex flex-col gap-2 mb-6 text-sm">
         {features.map((feature, i) => (
           <li key={i} className="flex items-center gap-2">
-            <span className="text-green-400">✔</span>
+            <span className="text-green-400"><FaCheck/></span>
             {feature}
           </li>
         ))}
