@@ -40,16 +40,17 @@ const PlanCard = ({
         ))}
       </ul>
 
-      <button
+      <a
+        href={`https://wa.me/5493517961371?text=Hola!%20Quisiera%20saber%20más%20sobre%20el%20Plan%20${title}`}
         className={`
-          w-full py-3 rounded-xl font-semibold
+          block w-full text-center py-3 rounded-xl font-semibold
           ${highlighted
-          ? "bg-ps-accent text-black bg-yellow-300"
+            ? "bg-ps-accent text-black bg-amber-300"
             : "bg-white/10 text-white"}
         `}
       >
         {cta}
-      </button>
+      </a>
     </div>
   )
 }
