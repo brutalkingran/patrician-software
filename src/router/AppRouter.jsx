@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router";
 // import NotFound from "../pages/NotFound";
 // import ForbiddenPage from "../pages/ForbiddenPage";
 import MainPage from "../pages/MainPage";
+import ClientFormPage from "../pages/ClientFormPage";
 
 const AppRouter = () => {
   return (
@@ -11,6 +12,7 @@ const AppRouter = () => {
       <Route index element={<MainPage />} />
       {/* <Route path="about" element={<About />} /> */}
       {/* <Route path="contact" element={<Contact />} /> */}
+      <Route path="test" element={<ClientFormPage />} />
 
       {/* Redirects */}
       {/* <Route path="not-found" element={<NotFound />} /> */}
