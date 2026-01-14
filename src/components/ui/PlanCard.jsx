@@ -18,7 +18,7 @@ const PlanCard = ({
       `}
     >
       {highlighted && (
-        <span className="inline-block mb-2 text-xs font-semibold bg-ps-accent text-red-400 px-3 py-1 rounded-full absolute top-3 skew-y-5 left-20 opacity-75">
+        <span className="inline-block mb-2 text-xs font-semibold bg-ps-accent text-red-400 px-3 py-1 rounded-full absolute top-2 -skew-y-5 left-0 opacity-75">
           Recomendado
         </span>
       )}

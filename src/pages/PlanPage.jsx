@@ -75,6 +75,8 @@ const PlanPage = () => {
               cta="Hablar con un asesor"
             />
           </div>
+
+            <p className="text-center mt-9 text-2xl italic">¿No estás seguro de qué plan elegir? Te ayudamos con una <a href="https://wa.me/5493517961371?text=Hola!%20Me%20interesa%20agendar%20una%20auditoría%20gratuita%20" className="font-bold text-amber-200 underline cursor-pointer">auditoría gratuita</a>.</p>
         </motion.main>
       )}
     </AnimatePresence>
