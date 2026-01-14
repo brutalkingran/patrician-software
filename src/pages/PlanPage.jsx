@@ -35,40 +35,42 @@ const PlanPage = () => {
           <div className="flex flex-col gap-6 md:flex-row justify-center md:mt-8">
             <PlanCard
               title="Inicial"
-              price="$180.000"
+              price="$290.000"
               subtitle="Ideal para empezar"
               features={[
-                "Tu sitio web profesional",
-                "Campañas de marketing mensuales",
-                "Soporte por WhatsApp",
+                "Página web profesional",
+                "Una campaña de marketing al mes",
+                "Soporte básico por WhatsApp",
               ]}
               cta="Empezar"
             />
 
             <PlanCard
               title="Profesional"
-              price="$365.000"
+              price="$570.000"
               subtitle="El más elegido"
               highlighted
               features={[
-                "Control de Stock",
-                "Campañas de marketing con mayor alcance",
-                "Clientes y seguimiento",
-                "Tu nuevo e-Commerce",
+                "E-commerce completo",
+                "Campañas de marketing optimizadas",
                 "Reportes y métricas",
+                "Anuncios animados",
+                "Diseño a medida"
               ]}
               cta="Quiero este plan"
             />
 
             <PlanCard
               title="Avanzado"
-              price="$650.000"
+              price="$770.000"
               subtitle="Para negocios en crecimiento"
               features={[
                 "Todo lo anterior",
+                "Control de stock",
+                "Clientes y seguimiento",
                 "Multiusuario",
-                "Integración de SaaS",
-                "Software a medida",
+                "Integraciones con SaaS",
+                "Soporte prioritario",
               ]}
               cta="Hablar con un asesor"
             />
@@ -76,8 +78,6 @@ const PlanPage = () => {
         </motion.main>
       )}
     </AnimatePresence>
-
-    
   )
 
 }
