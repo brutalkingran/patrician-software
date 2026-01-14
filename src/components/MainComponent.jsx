@@ -7,7 +7,7 @@ import LogoAnimado from "./ui/LogoAnimado";
 
 const MainComponent = () => {
   return (
-    <main className="flex flex-col text-center justify-center md:items-center">
+    <main className="flex flex-col text-center justify-center md:items-center md:h-screen">
       {/* MURAL ANIMADO */}
       <div className="hidden xl:block">
         <MuralAnimado direction="left-20" />
