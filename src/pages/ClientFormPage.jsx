@@ -56,9 +56,9 @@ const ClientFormPage = () => {
               setCurrent(c => c + 1)
             }
           }}
-          className="mt-8 py-3 rounded bg-white w-1/3 mx-auto flex items-center justify-center disabled:opacity-20 text-ps-mblue disabled:hover:cursor-not-allowed hover:cursor-pointer transition-all hover:bg-ps-mblue hover:text-ps-white"
+          className="mt-8 py-3 rounded bg-white w-1/3 mx-auto flex items-center justify-center disabled:opacity-20 text-ps-mblue disabled:hover:cursor-not-allowed hover:cursor-pointer transition-all hover:bg-blue-800 hover:text-ps-white"
         >
-          {current === total - 1 ? 'Finalizar' : 'Continuar'}
+          {current === total - 1 ? 'Conocé tu plan para avanzar al siguiente nivel' : 'Continuar'}
           <FaLongArrowAltRight className="ml-3" />
         </button>
       </div>
