@@ -20,7 +20,7 @@ const ClientFormPage = () => {
   const currentQuestionKey = questions[current].key
 
   return (
-    <main className="bg-ps-blue min-h-screen overflow-hidden flex flex-col justify-center md:bg-[url(logo_tr.svg)] bg-center bg-no-repeat">
+    <main className="bg-ps-blue min-h-screen overflow-hidden flex flex-col justify-center bg-[url(logo_tr.svg)] bg-center bg-no-repeat bg-contain">
       <h1 className="text-3xl md:text-5xl text-center p-4">Completá el Test</h1>
 
       <p className="text-center text-1xl opacity-80 mb-8 md:text-2xl">

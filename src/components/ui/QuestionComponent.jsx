@@ -34,8 +34,9 @@ const QuestionComponent = ({ onAnswer, question, Qname, isDark }) => {
                     rounded-full
                     bg-cover bg-center
                     border-2
+                    hover:scale-110
                     flex items-center justify-center
-                    ${isDark ? 'border-ps-white/30 peer-checked:bg-[url("/textures/check.svg")]' : 'border-ps-blue/90 peer-checked:bg-[url("/textures/check_black.svg")]'}
+                    ${isDark ? 'border-ps-white/30 hover:border-ps-white/60 peer-checked:bg-[url("/textures/check.svg")]' : 'border-ps-blue/90 peer-checked:bg-[url("/textures/check_black.svg")]'}
                     transition-all duration-200
                     peer-checked:scale-104
                     peer-checked:border-ps-accent
@@ -52,8 +53,8 @@ const QuestionComponent = ({ onAnswer, question, Qname, isDark }) => {
         </div>
 
         <div className="flex justify-between text-sm opacity-70 md:text-2xl">
-          <span>En desacuerdo</span>
-          <span>De acuerdo</span>
+          <span className={`${isDark ? 'text-red-400' : 'text-red-800'}`}>En desacuerdo</span>
+          <span className={`${isDark ? 'text-green-400' : 'text-green-800'}`}>De acuerdo</span>
         </div>
       </div>
     </section>
