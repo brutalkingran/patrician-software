@@ -10,7 +10,7 @@ const PlanCard = ({
 }) => {
   return (
     <div
-      className={`flex flex-col justify-between
+      className={`flex flex-col justify-between hover:scale-103 transition-all
         rounded-2xl p-5 border md:w-1/4 md:h-115
         ${highlighted
           ? "bg-white text-ps-blue border-ps-accent shadow-xl scale-[1.02]"
@@ -46,10 +46,10 @@ const PlanCard = ({
       <a
         href={`https://wa.me/5493517961371?text=Hola!%20Quisiera%20saber%20más%20sobre%20el%20Plan%20${title}`}
         className={`
-          block w-full text-center py-3 rounded-xl font-semibold
+          block w-full text-center py-3 rounded-xl font-semibold transition-all
           ${highlighted
-            ? "bg-ps-accent text-black bg-amber-300"
-            : "bg-white/10 text-white"}
+          ? "bg-ps-accent text-black bg-amber-300 hover:bg-ps-mblue hover:text-ps-white"
+          : "bg-white/10 text-white hover:bg-ps-white hover:text-ps-mblue"}
         `}
       >
         {cta}
