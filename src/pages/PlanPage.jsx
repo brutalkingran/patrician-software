@@ -34,21 +34,22 @@ const PlanPage = () => {
 
           <div className="flex flex-col gap-6 md:flex-row justify-center md:mt-8">
             <PlanCard
-              title="Inicial"
+              title="Primeros pasos"
               price="$290.000"
-              subtitle="Ideal para empezar"
+              subtitle="Un viaje de mil millas comienza con un primer paso"
               features={[
                 "Página web profesional",
                 "Una campaña de marketing al mes",
                 "Soporte básico por WhatsApp",
+                "Tu negocio aparecerá en Google, Facebook e Instagram"
               ]}
               cta="Empezar"
             />
 
             <PlanCard
-              title="Profesional"
+              title="Emprendedor"
               price="$570.000"
-              subtitle="El más elegido"
+              subtitle="Más ventas, más control, mejores decisiones"
               highlighted
               features={[
                 "E-commerce completo",
@@ -61,9 +62,9 @@ const PlanPage = () => {
             />
 
             <PlanCard
-              title="Avanzado"
+              title="Élite"
               price="$770.000"
-              subtitle="Para negocios en crecimiento"
+              subtitle="Para negocios que ya juegan en serio"
               features={[
                 "Todo lo anterior",
                 "Control de stock",

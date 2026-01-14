@@ -24,7 +24,7 @@ const PlanCard = ({
       )}
       
       <div>
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-xl md:text-3xl font-semibold">{title}</h3>
         <p className="text-sm opacity-70 mb-4">{subtitle}</p>
 
         <div className="text-3xl font-bold mb-4">
