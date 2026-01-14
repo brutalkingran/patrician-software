@@ -1,10 +1,15 @@
-const QuestionComponent = ({ onAnswer, question, Qname, isDark }) => {
+const QuestionComponent = ({ onAnswer,
+  question,
+  Qname,
+  isDark,
+  currentIndex,
+  total }) => {
   const options = [-2, -1, 0, 1, 2]
 
   return (
     <section className="w-screen flex-shrink-0 flex justify-center items-center even:-skew-y-1 odd:skew-y-1 odd:bg-slate-700 even:bg-slate-300 even:text-ps-blue ">
       <div className="max-w-xl w-full px-2 rounded py-6">
-        <h2 className="text-xl mb-6 italic opacity-70 text-center md:text-3xl">"{question}"</h2>
+        <h2 className="text-xl mb-6 italic opacity-70 text-center md:text-3xl font-serif"><span className={`${isDark ? 'bg-ps-white' : 'bg-ps-mblue text-ps-white'} text-ps-blue px-2.5 py-4 rounded-full text-center`}>{currentIndex+1}/{total}</span> "{question}"</h2>
 
         <div className="flex justify-between mb-5 items-center">
           {options.map((value) => {

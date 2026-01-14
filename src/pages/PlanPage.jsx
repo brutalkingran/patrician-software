@@ -18,7 +18,7 @@ const PlanPage = () => {
         <LoadingComponent key="loader" />
       ) : (
         <motion.main
-          className="flex flex-col justify-center bg-ps-blue px-4 py-10 h-min-screen md:h-screen md:bg-[url(logo_tr.svg)] bg-center bg-no-repeat"
+          className="flex flex-col justify-center bg-ps-blue px-4 py-10 h-min-screen md:h-screen md:bg-[url(/logo_tr.svg)] bg-center bg-no-repeat"
           key="plans"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
