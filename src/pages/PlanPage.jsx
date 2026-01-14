@@ -2,7 +2,7 @@ import PlanCard from "../components/ui/PlanCard"
 
 const PlanPage = () => {
   return (
-    <section className="flex flex-col justify-center bg-ps-blue px-4 py-10 h-min-screen md:h-screen">
+    <section className="flex flex-col justify-center bg-ps-blue px-4 py-10 h-min-screen md:h-screen md:bg-[url(logo_tr.svg)] bg-center bg-no-repeat">
       <h2 className="text-3xl/8 font-bold text-center mb-2 md:text-6xl">
         Planes pensados para tu negocio
       </h2>

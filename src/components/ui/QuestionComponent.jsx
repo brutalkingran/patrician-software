@@ -1,10 +1,10 @@
-const QuestionComponent = ({ onAnswer, question, Qname }) => {
+const QuestionComponent = ({ onAnswer, question, Qname, isDark }) => {
   const options = [-2, -1, 0, 1, 2]
 
   return (
-    <section className="w-full flex-shrink-0 p-2 bg-slate-700 rounded skew-2 py-6">
-      <div className="-skew-1">
-        <h2 className="text-xl mb-6 italic opacity-70 text-center">"{question}"</h2>
+    <section className="w-screen flex-shrink-0 flex justify-center items-center even:-skew-y-1 odd:skew-y-1 odd:bg-slate-700 even:bg-slate-300 even:text-ps-blue ">
+      <div className="max-w-xl w-full px-2 rounded py-6">
+        <h2 className="text-xl mb-6 italic opacity-70 text-center md:text-3xl">"{question}"</h2>
 
         <div className="flex justify-between mb-5 items-center">
           {options.map((value) => {
@@ -33,18 +33,16 @@ const QuestionComponent = ({ onAnswer, question, Qname }) => {
                   className={`
                     rounded-full
                     bg-cover bg-center
-                    border-2 border-white/30
+                    border-2
                     flex items-center justify-center
-
+                    ${isDark ? 'border-ps-white/30 peer-checked:bg-[url("/textures/check.svg")]' : 'border-ps-blue/90 peer-checked:bg-[url("/textures/check_black.svg")]'}
                     transition-all duration-200
                     peer-checked:scale-104
                     peer-checked:border-ps-accent
                     peer-checked:ring-3
                     peer-checked:ring-ps-accent/40
-                    peer-checked:bg-[url('/textures/check.svg')]
                     peer-checked:bg-size-[auto_${size}px]
                     peer-checked:bg-no-repeat
-
                     group
                   `}
                 />
@@ -53,7 +51,7 @@ const QuestionComponent = ({ onAnswer, question, Qname }) => {
           })}
         </div>
 
-        <div className="flex justify-between text-sm opacity-70">
+        <div className="flex justify-between text-sm opacity-70 md:text-2xl">
           <span>En desacuerdo</span>
           <span>De acuerdo</span>
         </div>
