@@ -10,12 +10,12 @@ const MainPage = () => {
   return (
     <>
       <MainComponent />
-      <PatricianComponent />
-      <ExpertsComponents />
-      <WebsiteComponent />
-      <MarketingComponent />
-      <ChosenUsComponent/>
-      <PricesComponent />
+      {/* <PatricianComponent /> */}
+      {/* <ExpertsComponents /> */}
+      {/* <WebsiteComponent /> */}
+      {/* <MarketingComponent /> */}
+      {/* <ChosenUsComponent/> */}
+      {/* <PricesComponent /> */}
     </>
   )
 }

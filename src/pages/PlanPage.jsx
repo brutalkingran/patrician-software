@@ -2,15 +2,15 @@ import PlanCard from "../components/ui/PlanCard"
 
 const PlanPage = () => {
   return (
-    <section className="bg-ps-blue px-4 py-10 h-min-screen">
-      <h2 className="text-3xl/8 font-bold text-center mb-2">
+    <section className="flex flex-col justify-center bg-ps-blue px-4 py-10 h-min-screen md:h-screen">
+      <h2 className="text-3xl/8 font-bold text-center mb-2 md:text-6xl">
         Planes pensados para tu negocio
       </h2>
-      <p className="text-center text-sm opacity-80 mb-8">
+      <p className="text-center text-sm opacity-80 mb-8 md:text-3xl">
         Elegí el plan que mejor se adapte a tu etapa
       </p>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 md:flex-row justify-center md:mt-8">
         <PlanCard
           title="Inicial"
           price="$180.000"
