@@ -15,7 +15,7 @@ const MainPage = () => {
       {/* <ExpertsComponents /> */}
       {/* <WebsiteComponent /> */}
       {/* <MarketingComponent /> */}
-      {/* <ChosenUsComponent/> */}
+      <ChosenUsComponent/>
       {/* <PricesComponent /> */}
       <FooterComponent />
     </>

@@ -8,9 +8,9 @@ const logos = [logo_1, logo_2, logo_3]
 
 const ChosenUsComponent = () => {
   return (
-    <section className="mt-20 relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] flex flex-col mx-auto justify-center md:w-3/4">
-      <h2 className="font-extralight text-center mb-3 italic text-[1.4rem]">
-        ¿Te vas a sumar a la Élite? Tu competencia <span className="underline">ya nos eligió</span>
+    <section className="mt-10 pb-25 relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] flex flex-col mx-auto justify-center md:w-3/4">
+      <h2 className="font-extralight text-center mb-3 italic text-base md:text-[1.4rem]">
+        ¿Te vas a sumar a la Élite? <br />Tu competencia <span className="underline text-red-400">ya nos eligió.</span>
       </h2>
 
       <div className="flex
@@ -26,7 +26,7 @@ const ChosenUsComponent = () => {
             x: ["0%", "-51%"],
           }}
           transition={{
-            duration: 20,
+            duration: 30,
             ease: "linear",
             repeat: Infinity,
           }}
