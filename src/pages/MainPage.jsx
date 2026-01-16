@@ -5,6 +5,7 @@ import ChosenUsComponent from "../components/ChosenUsComponent";
 import WebsiteComponent from "../components/WebsiteComponent";
 import MarketingComponent from "../components/MarketingComponent";
 import PricesComponent from "../components/PricesComponent";
+import FooterComponent from "../components/FooterComponent";
 
 const MainPage = () => {
   return (
@@ -16,6 +17,7 @@ const MainPage = () => {
       {/* <MarketingComponent /> */}
       {/* <ChosenUsComponent/> */}
       {/* <PricesComponent /> */}
+      <FooterComponent />
     </>
   )
 }
