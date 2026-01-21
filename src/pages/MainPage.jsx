@@ -19,7 +19,7 @@ const MainPage = () => {
       <ChosenUsComponent/>
       {/* <PricesComponent /> */}
       <FooterComponent />
-      <ContactComponent />
+      {/* <ContactComponent /> */}
     </>
   )
 }

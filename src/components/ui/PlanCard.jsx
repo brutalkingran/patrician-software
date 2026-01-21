@@ -3,7 +3,9 @@ import { FaCheck } from "react-icons/fa";
 const PlanCard = ({
   title,
   subtitle,
+  realPrice,
   price,
+  mensualidad,
   features,
   cta,
   highlighted = false,
@@ -27,9 +29,18 @@ const PlanCard = ({
         <h3 className="text-xl md:text-3xl font-semibold">{title}</h3>
         <p className="text-sm opacity-70 mb-4">{subtitle}</p>
 
-        <div className="text-3xl font-bold mb-4">
-          {price}
-          <span className="text-sm font-normal opacity-70"> / mes</span>
+        <div className="mt-5">
+          <div className="absolute -translate-y-4 translate-x-15 opacity-65 rotate-5 text-red-400 text-2xl font-bold mb-4 line-through">
+            {realPrice}
+          </div>
+          <div className="text-3xl font-bold mb-4">
+            {price}
+            <span className="text-sm font-normal opacity-70"> / primer pago</span>
+          </div>
+          <div className="hidden text-3xl font-bold mb-4">
+            {mensualidad}
+            <span className="text-sm font-normal opacity-70"> / mes</span>
+          </div>
         </div>
       </div>
 
@@ -54,6 +65,7 @@ const PlanCard = ({
       >
         {cta}
       </a>
+      <p className={`text-center italic ${highlighted ? "text-gray-500" : "text-gray-400"}`}>Requiere un mantenimiento de {mensualidad} al mes</p>
     </div>
   )
 }

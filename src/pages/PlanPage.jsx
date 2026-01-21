@@ -29,49 +29,63 @@ const PlanPage = () => {
             Planes pensados para tu negocio
           </h2>
           <p className="text-center text-sm opacity-80 mb-8 md:text-3xl">
-            Elegí el plan que mejor se adapte a tu etapa
+            Elegí el plan de sitio web + campaña de marketing que mejor se adapte a tu etapa
           </p>
 
           <div className="flex flex-col gap-6 md:flex-row justify-center md:mt-8">
+            {/* BASICO */}
             <PlanCard
               title="Primeros pasos"
-              price="$290.000"
+              realPrice="$ 589,807.50"
+              price="$ 453,698.08"
+              mensualidad="$ 45,369.81"
               subtitle="Un viaje de mil millas comienza con un primer paso"
               features={[
                 "Página web profesional",
+                "Diseño limpio y responsivo para todo dispositivo",
                 "Una campaña de marketing al mes",
-                "Soporte básico por WhatsApp",
-                "Tu negocio aparecerá en Google, Facebook e Instagram"
+                "Captura simple de leads",
+                "Tu negocio aparecerá en Google, Facebook e Instagram",
+                "Ideal para validar una idea o negocio nuevo"
               ]}
               cta="Empezar"
             />
 
+            {/* MEDIO */}
             <PlanCard
               title="Emprendedor"
-              price="$570.000"
+              realPrice=" $ 844,331.90 "
+              price=" $ 649,486.08"
+              mensualidad=" $ 64,948.61"
               subtitle="Más ventas, más control, mejores decisiones"
               highlighted
               features={[
-                "E-commerce completo",
-                "Campañas de marketing optimizadas",
-                "Reportes y métricas",
+                "Reunión previa al proyecto",
+                "Diseño enfocado a conversión",
+                "Campañas multi-canal (Meta + Google)	",
+                "Suscripción a Newsletter",
                 "Anuncios animados",
-                "Diseño a medida"
+                "Diseño a medida",
+                "Automatización básica de leads"
               ]}
               cta="Quiero este plan"
             />
 
+            {/* PRO */}
             <PlanCard
               title="Élite"
-              price="$770.000"
+              realPrice="$ 1,317,531.90 "
+              price="$ 1,013,486.08"
+              mensualidad="$ 101,348.61"
               subtitle="Para negocios que ya juegan en serio"
               features={[
                 "Todo lo anterior",
-                "Control de stock",
-                "Clientes y seguimiento",
-                "Multiusuario",
-                "Integraciones con SaaS",
+                "Reuniones más frecuentes",
+                "Funnel completo de ventas",
+                "Marketing agresivo y escalable",
+                "Automatizaciones avanzadas (emails, WhatsApp, CRM)",
                 "Soporte prioritario",
+                "Dirección estratégica personalizada",
               ]}
               cta="Hablar con un asesor"
             />
