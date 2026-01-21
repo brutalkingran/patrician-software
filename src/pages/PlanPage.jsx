@@ -83,7 +83,7 @@ const PlanPage = () => {
                 "Reuniones más frecuentes",
                 "Funnel completo de ventas",
                 "Marketing agresivo y escalable",
-                "Automatizaciones avanzadas (emails, WhatsApp, CRM)",
+                "Automatizaciones avanzadas (emails, WhatsApp)",
                 "Soporte prioritario",
                 "Dirección estratégica personalizada",
               ]}
