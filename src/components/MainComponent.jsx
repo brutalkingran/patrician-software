@@ -28,13 +28,6 @@ const MainComponent = () => {
         <h2 className="text-lg italic font-extralight mx-6 md:text-2xl md:max-w-[70%]">
           Expertos en Desarrollo de Software y Marketing Digital
         </h2>
-
-        {/* CONTACTOS */}
-        <div className="flex flex-row justify-center items-center gap-5 mt-5 md:gap-10 md:mt-10 border-3 border-double rounded-2xl p-3 cool-texture">
-          <a target="_blank" rel="noopener noreferrer" aria-label="Contactar a Patrician Software por Whatsapp" className="cursor-pointer hover:scale-125 transition-all" href="https://wa.me/543834091942"><AiOutlineWhatsApp className="w-18 h-18 md:w-14 md:h-14" /></a>
-          <a target="_blank" rel="noopener noreferrer" aria-label="Visitar a Patrician Software en Instagram" className="cursor-pointer hover:scale-125 transition-all" href="https://www.instagram.com/patrician.mkt?igsh=N3VtbGhydTRqdzNi"><FaInstagram className="w-18 h-18 md:w-14 md:h-14" /></a>
-          <a target="_blank" rel="noopener noreferrer" aria-label="Contactar a Patrician Software por e-Mail" className="cursor-pointer hover:scale-125 transition-all" href="mailto:services@patrician-software.com/"><AiOutlineMail className="w-18 h-18 md:w-14 md:h-14" /></a>
-        </div>
         
         <p className="text-1xl italic md:text-xl md:mt-0">Contáctenos</p>
       </div>
