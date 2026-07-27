@@ -3,11 +3,14 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from "react-router"
 import './index.css'
 import App from './App.jsx'
+import { MuralProvider } from './context/MuralContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <MuralProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </MuralProvider>
   </StrictMode>,
 )
