@@ -12,14 +12,14 @@ const MainPage = () => {
   return (
     <>
       <MainComponent />
-      {/* <PatricianComponent /> */}
-      {/* <ExpertsComponents /> */}
-      {/* <WebsiteComponent /> */}
-      {/* <MarketingComponent /> */}
+      <PatricianComponent />
+      <ExpertsComponents />
+      <WebsiteComponent />
+      <MarketingComponent />
       <ChosenUsComponent/>
-      {/* <PricesComponent /> */}
+      <PricesComponent />
       <FooterComponent />
-      {/* <ContactComponent /> */}
+      <ContactComponent />
     </>
   )
 }
