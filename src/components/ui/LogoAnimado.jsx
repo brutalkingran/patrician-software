@@ -34,7 +34,7 @@ const LogoAnimado = () => {
       <motion.img
         initial={{ y: -50, opacity: 0 }}
         animate={textControls}
-        className="col-start-1 row-start-1 md:w-[350px]"
+        className="col-start-1 row-start-1 md:w-[250px]"
         src={logo_text}
         draggable="false"
         alt="Logo Texto"
