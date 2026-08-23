@@ -7,6 +7,7 @@ import MarketingComponent from "../components/MarketingComponent";
 import PricesComponent from "../components/PricesComponent";
 import FooterComponent from "../components/FooterComponent";
 import ContactComponent from "../components/ContactComponent";
+import FooterNico from "../components/FooterNico";
 
 const MainPage = () => {
   return (
@@ -20,6 +21,7 @@ const MainPage = () => {
       <PricesComponent />
       <FooterComponent />
       <ContactComponent />
+      <FooterNico />
     </>
   )
 }
