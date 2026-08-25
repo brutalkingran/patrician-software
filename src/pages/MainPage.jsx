@@ -8,16 +8,18 @@ import PricesComponent from "../components/PricesComponent";
 import FooterComponent from "../components/FooterComponent";
 import ContactComponent from "../components/ContactComponent";
 import FooterNico from "../components/FooterNico";
+import SeccionceluComponent from "../components/SeccionceluComponents";
 
 const MainPage = () => {
   return (
     <>
       <MainComponent />
       <PatricianComponent />
+      <ChosenUsComponent/>
+      <SeccionceluComponent />
       <ExpertsComponents />
       <WebsiteComponent />
       <MarketingComponent />
-      <ChosenUsComponent/>
       <PricesComponent />
       <FooterComponent />
       <ContactComponent />

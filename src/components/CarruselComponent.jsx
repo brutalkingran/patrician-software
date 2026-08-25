@@ -80,6 +80,8 @@ const CarruselComponent = () => {
         </motion.div>
       </AnimatePresence>
     </div>
+
+    
   )
 }
 
