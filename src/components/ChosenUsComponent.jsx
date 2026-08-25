@@ -199,40 +199,6 @@ const ChosenUsComponent = () => {
           </div>
         </div>
       </div>
-
-      {/* ======================================================= */}
-      {/* PARTE 2: SECCIÓN DE TARJETAS TIPO IMAGEN (NUESTROS CLIENTES) */}
-      {/* ======================================================= */}
-      <div className="relative z-10 w-full pt-6">
-        {/* Encabezado calcado de la imagen */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-wider text-white uppercase mb-1">
-            NUESTROS
-          </h2>
-          <span className="text-3xl md:text-5xl font-extrabold tracking-wider text-white uppercase block mb-4">
-            CLIENTES
-          </span>
-          <p className="text-slate-300 text-sm md:text-base font-light">
-            Marcas que confían en nuestra excelencia digital
-          </p>
-        </div>
-
-        {/* Grilla de Tarjetas Blancas Fijas */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 px-4 max-w-6xl mx-auto">
-          {logosClientesFijos.map((logo, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-xl flex items-center justify-center p-4 h-36 w-full transition-transform duration-300 hover:scale-105"
-            >
-              <img
-                src={logo}
-                alt={`Cliente ${index}`}
-                className="max-h-16 max-w-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   )
 }
