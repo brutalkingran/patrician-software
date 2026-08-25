@@ -4,17 +4,23 @@ import { motion } from "framer-motion"
 import logo_1 from "/logos/grupo_aluminium_logo_hor_white.png"
 import logo_2 from "/logos/electro_logo_hor.png"
 import logo_3 from "/logos/manantial_logo.png"
+import logo_4 from "/logos/Distri_fandy.jpeg"
+import logo_5 from "/logos/queen.jpeg"
+import logo_6 from "/logos/airtotal.jpeg"
 
-const logosCarrusel = [logo_1, logo_2, logo_3]
+const logosCarrusel = [logo_1, logo_2, logo_3, logo_4, logo_5, logo_6]
 
 // Logos para las tarjetas estáticas de abajo
 const logosClientesFijos = [
   logo_1,
   logo_2,
   logo_3,
+  logo_4,
+  logo_5,
+  logo_6,
   logo_1,
-  logo_2,
-  logo_3,
+  logo_4,
+  logo_5
 ]
 
 const ChosenUsComponent = () => {
@@ -167,6 +173,7 @@ const ChosenUsComponent = () => {
       {/* PARTE 1: SECCIÓN ORIGINAL (TÍTULO Y LOGOS EN MOVIMIENTO) */}
       {/* ======================================================= */}
       <div className="relative z-10">
+
         <h2 className="w-full max-w-3xl mx-auto text-center mb-10 px-4 italic font-extralight text-xl sm:text-2xl md:text-[1.8rem] lg:text-[2rem] leading-relaxed text-white">
           ¿Te vas a sumar a la Élite?
           <br />
@@ -174,6 +181,13 @@ const ChosenUsComponent = () => {
           <span className="underline text-red-400">
             ya nos eligió.
           </span>
+
+          <br />
+          <br />
+
+            <h1>
+              Nuestros clientes
+            </h1>
         </h2>
 
         <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mb-16">
