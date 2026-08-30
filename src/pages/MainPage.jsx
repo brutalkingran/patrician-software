@@ -9,6 +9,7 @@ import FooterComponent from "../components/FooterComponent";
 import ContactComponent from "../components/ContactComponent";
 import FooterNico from "../components/FooterNico";
 import SeccionceluComponent from "../components/SeccionceluComponents";
+import PlanPage from "./PlanPage";
 
 const MainPage = () => {
   return (
@@ -20,6 +21,7 @@ const MainPage = () => {
       <ExpertsComponents />
       <WebsiteComponent />
       <MarketingComponent />
+      <PlanPage />
       <PricesComponent />
       <FooterComponent />
       <ContactComponent />
