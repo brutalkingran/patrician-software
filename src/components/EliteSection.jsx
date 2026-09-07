@@ -11,9 +11,11 @@ const MENSAJES_EXPERTS = [
   "¿Algo más? Dejá que nuestros proyectos hablen por nosotros",
 ];
 
-const EliteSection = () => {
+const EliteSection = ({ index = 0 }) => {
   return (
     <Section
+      index={index}
+      mediaPosition="left"
       title={
         <>
           Expertos en la{" "}
@@ -26,11 +28,7 @@ const EliteSection = () => {
       tag="Patrician Software"
       description="aspira a aprovechar todas y cada una de las herramientas que la web nos deja a disposición:"
       messages={MENSAJES_EXPERTS}
-      muralEnterColor="var(--color-ps-black)"
-      muralLeaveColor="var(--color-ps-white)"
-      mediaPosition="left"
     >
-      {/* Chiche inyectado como children */}
       <PhoneMockup>
         <CarruselComponent />
       </PhoneMockup>
