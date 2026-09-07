@@ -9,27 +9,52 @@ const Section = ({
   description,
   messages,
   children,
-  bgColor = "bg-ps-cream",
-  textColor = "text-ps-blue",
-  muralEnterColor = "var(--color-ps-black)",
-  muralLeaveColor = "var(--color-ps-white)",
+  variant, // "cream" | "blue"
+  index,   // opcional: si le pasás el índice (0, 1, 2...), calcula autom. par (cream) / impar (blue)
   mediaPosition = "left", // "left" | "right"
+  muralEnterColor,
+  muralLeaveColor,
   extraContent,
 }) => {
   const { setMuralColor } = useMural();
+
+  // Determina si la sección es variante crema o azul (por prop explícita o por índice)
+  const isBlue =
+    variant === "blue" || (typeof index === "number" && index % 2 !== 0);
+
+  // Paleta de estilos según la variante
+  const styles = isBlue
+    ? {
+      bg: "bg-ps-mblue md:bg-ps-blue",
+      text: "text-ps-cream",
+      subtitle: "text-ps-cream/80",
+      description: "text-ps-cream/90",
+      tag: "bg-ps-cream text-ps-blue border-ps-cream",
+      muralEnter: muralEnterColor || "var(--color-ps-blue)",
+      muralLeave: muralLeaveColor || "var(--color-ps-cream)",
+    }
+    : {
+      bg: "bg-ps-cream",
+      text: "text-ps-blue",
+      subtitle: "text-ps-blue/80",
+      description: "text-ps-blue/90",
+      tag: "bg-ps-blue text-ps-cream border-ps-blue",
+      muralEnter: muralEnterColor || "var(--color-ps-black)",
+      muralLeave: muralLeaveColor || "var(--color-ps-white)",
+    };
 
   const isMediaRight = mediaPosition === "right";
 
   return (
     <motion.section
-      className={`relative z-10 w-full ${bgColor} ${textColor} py-16 md:py-24 px-4 md:px-8 overflow-hidden`}
-      onViewportEnter={() => muralEnterColor && setMuralColor(muralEnterColor)}
-      onViewportLeave={() => muralLeaveColor && setMuralColor(muralLeaveColor)}
+      className={`relative z-10 w-full ${styles.bg} ${styles.text} py-16 md:py-24 px-4 md:px-8 overflow-hidden`}
+      onViewportEnter={() => setMuralColor(styles.muralEnter)}
+      onViewportLeave={() => setMuralColor(styles.muralLeave)}
       viewport={{ amount: 0.2 }}
     >
       <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        {/* Slot / Children para el Chiche (Celular, Imagen, Card, etc.) */}
+        {/* Slot / Children para el Chiche (Celular, Imagen, etc.) */}
         {children && (
           <motion.div
             initial={{ opacity: 0, x: isMediaRight ? 50 : -50 }}
@@ -66,7 +91,7 @@ const Section = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-base md:text-lg italic opacity-80 mb-5 leading-relaxed"
+              className={`font-serif text-base md:text-lg italic ${styles.subtitle} mb-5 leading-relaxed`}
             >
               {subtitle}
             </motion.p>
@@ -78,10 +103,12 @@ const Section = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="font-serif text-sm md:text-base opacity-90 mb-4 leading-relaxed"
+              className={`font-serif text-sm md:text-base ${styles.description} mb-4 leading-relaxed`}
             >
               {tag && (
-                <span className="inline-block bg-ps-blue text-ps-cream px-2.5 py-0.5 text-xs tracking-widest font-bold uppercase mr-2 shadow-xs border border-ps-blue">
+                <span
+                  className={`inline-block px-2.5 py-0.5 text-xs tracking-widest font-bold uppercase mr-2 shadow-xs border ${styles.tag}`}
+                >
                   {tag}
                 </span>
               )}{" "}
@@ -89,12 +116,12 @@ const Section = ({
             </motion.div>
           )}
 
-          {/* Ticker / Lista de Mensajes opcional */}
+          {/* Ticker / Lista de Mensajes */}
           {messages && messages.length > 0 && (
             <TextTicker messages={messages} />
           )}
 
-          {/* Slot opcional para contenido extra al final del bloque de texto */}
+          {/* Slot para contenido extra */}
           {extraContent}
         </div>
 
