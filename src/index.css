@@ -15,6 +15,8 @@
 
   --color-ps-white: oklch(0.979 0.003 247.87);
   --color-ps-cream: oklch(0.95 0.04 85.0);
+
+  --color-ps-black: #1a1a1a;
 }
 
 @layer base {
