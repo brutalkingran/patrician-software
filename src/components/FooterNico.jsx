@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="relative overflow-hidden bg-ps-mblue text-ps-white font-serif border-t border-ps-cream/25">
 
       {/* Contenedor principal con padding para dejar espacio a los bordes laterales */}
-      <div className="relative max-w-6xl mx-auto px-12 md:px-20 py-14">
+      <div className="relative max-w-6xl mx-auto px-12 md:px-20 md:py-14 py-18">
 
         {/* CONTENIDO PRINCIPAL */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">

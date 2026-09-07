@@ -10,7 +10,7 @@ const PricesComponent = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ repeat: true, amount: 0.3 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="text-xl md:text-2xl text-center font-serif font-black tracking-tighter uppercase leading-none text-white/90 mb-6"
+        className="text-xl md:text-3xl text-center font-serif font-black tracking-tighter uppercase leading-none text-white/90 mb-6 md:mb-0 italic"
       >
         ¿Qué estás esperando?
       </motion.h2>
