@@ -7,7 +7,7 @@ import PricesComponent from "../components/PricesComponent";
 import FooterComponent from "../components/FooterComponent";
 import ContactComponent from "../components/ContactComponent";
 import FooterNico from "../components/FooterNico";
-import SeccionceluComponent from "../components/SeccionceluComponents";
+import EliteSection from "../components/EliteSection";
 import PlanPage from "./PlanPage";
 
 const MainPage = () => {
@@ -15,7 +15,7 @@ const MainPage = () => {
     <>
       <MainComponent />
       <ChosenUsComponent/>
-      <SeccionceluComponent />
+      <EliteSection />
       <WebsiteComponent />
       <MarketingComponent />
       <PlanPage />
