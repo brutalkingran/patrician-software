@@ -1,49 +1,55 @@
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineWhatsApp, AiOutlineMail } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import MuralAnimado from "./ui/MuralAnimado";
 import LogoAnimado from "./ui/LogoAnimado";
 
 const MainComponent = () => {
   return (
-    <main className="flex flex-col text-center justify-center md:items-center md:h-screen">
-      {/* MURAL ANIMADO */}
+    <main className="relative flex flex-col text-center justify-center items-center min-h-screen w-full overflow-hidden">
+      {/* MURAL ANIMADO LATERAL */}
       <div className="hidden xl:block">
         <MuralAnimado direction="left-20" />
         <MuralAnimado direction="right-20" />
       </div>
 
-      {/* INICIO */}
+      {/* INICIO - HERO FRAME */}
       <div 
-        className="m-1 flex flex-col items-center justify-center gap-3 min-h-screen md:min-h-[80vh] md:max-w-[120vh] border-40 md:border-60 md:gap-6 md:min-w-[100vh]" 
+        className="m-2 flex flex-col items-center justify-center gap-4 min-h-[95vh] w-full max-w-4xl px-6 py-12 md:gap-6 border-40 md:border-60" 
         id="borderimg3"
       >
         {/* LOGO */}
         <LogoAnimado />
 
-        {/* TITULOS & SUBTITULO */}
-        <h1 className="text-4xl font-serif font-light md:text-6xl">Patrician Software</h1>
-        <h2 className="text-lg italic font-extralight mx-6 md:text-2xl md:max-w-[70%]">
-          Expertos en Desarrollo de Software y Marketing Digital
-        </h2>
+        {/* TÍTULO Y SUBTÍTULO IMPERIAL */}
+        <div className="flex flex-col gap-2 items-center">
+          <h1 className="text-4xl md:text-6xl font-serif font-light tracking-wide text-ps-white uppercase">
+            Patrician Software
+          </h1>
+          <h2 className="text-base md:text-xl font-serif italic max-w-2xl px-4 leading-relaxed">
+            Expertos en Desarrollo de Software y Marketing Digital
+          </h2>
+        </div>
 
-        {/* CONTÁCTENOS */}
-        <p className="text-xl font-medium tracking-wide uppercase text-gray-500 md:text-sm md:mt-4">
-          Contáctenos
-        </p>
+        {/* SEPARADOR Y ETIQUETA DE CONTACTO */}
+        <div className="flex flex-col items-center gap-2 mt-2">
+          <span className="w-12 h-px bg-ps-lblue/40" />
+          <p className="font-serif text-xs md:text-sm uppercase tracking-[0.3em] text-ps-cream/80 font-normal">
+            Contáctenos
+          </p>
+        </div>
 
-        {/* CONTENEDOR CON DOBLE LÍNEA GRUESA E ICONOS EN BLANCO MARMÓREO */}
-        <div className="relative flex items-center gap-6 p-6 bg-[#0d1e3d] border-4 border-white shadow-2xl mt-2 max-w-xs mx-auto before:content-[''] before:absolute before:inset-1.5 before:border-2 before:border-white/60 before:pointer-events-none">
+        {/* CAJA DE REDES SOCIALES */}
+        <div className="relative flex items-center justify-center gap-6 px-8 py-3 bg-ps-blue/90 border-2 border-ps-white shadow-2xl transition-all duration-300 before:content-[''] before:absolute before:inset-1 before:border before:border-ps-white/40 before:pointer-events-none">
           
           {/* WhatsApp */}
           <a 
             target="_blank" 
             rel="noopener noreferrer" 
-            aria-label="Contactar a Patrician Software por Whatsapp" 
-            className="relative z-10 cursor-pointer flex items-center justify-center w-12 h-12 bg-transparent transition-all duration-300 hover:scale-115 hover:bg-white/10" 
+            aria-label="Contactar a Patrician Software por WhatsApp" 
             href="https://wa.me"
+            className="relative z-10 flex items-center justify-center w-11 h-11 text-ps-white transition-all duration-300 hover:scale-115 hover:text-ps-lblue" 
           >
-            <AiOutlineWhatsApp className="w-8 h-8 md:w-9 md:h-9 text-white/90 transition-colors hover:text-white" />
+            <AiOutlineWhatsApp className="w-7 h-7 md:w-8 md:h-8" />
           </a>
 
           {/* Instagram */}
@@ -51,10 +57,10 @@ const MainComponent = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Visitar a Patrician Software en Instagram" 
-            className="relative z-10 cursor-pointer flex items-center justify-center w-12 h-12 bg-transparent transition-all duration-300 hover:scale-115 hover:bg-white/10" 
             href="https://instagram.com"
+            className="relative z-10 flex items-center justify-center w-11 h-11 text-ps-white transition-all duration-300 hover:scale-115 hover:text-ps-lblue" 
           >
-            <FaInstagram className="w-8 h-8 md:w-9 md:h-9 text-white/90 transition-colors hover:text-white" />
+            <FaInstagram className="w-7 h-7 md:w-8 md:h-8" />
           </a>
 
           {/* E-Mail */}
@@ -62,12 +68,12 @@ const MainComponent = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Contactar a Patrician Software por e-Mail" 
-            className="relative z-10 cursor-pointer flex items-center justify-center w-12 h-12 bg-transparent transition-all duration-300 hover:scale-115 hover:bg-white/10" 
             href="mailto:services@patrician-software.com"
+            className="relative z-10 flex items-center justify-center w-11 h-11 text-ps-white transition-all duration-300 hover:scale-115 hover:text-ps-lblue" 
           >
-            <AiOutlineMail className="w-8 h-8 md:w-9 md:h-9 text-white/90 transition-colors hover:text-white" />
+            <AiOutlineMail className="w-7 h-7 md:w-8 md:h-8" />
           </a>
-          
+
         </div>
 
       </div>
