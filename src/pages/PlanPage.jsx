@@ -53,9 +53,9 @@ const PlanPage = () => {
                 Inversión Estratégica
               </span>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-4 text-ps-cream">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-4 text-ps-white">
                 Planes diseñados para impulsar tu{" "}
-                <span className="italic font-normal text-ps-cream underline decoration-ps-lblue decoration-2 underline-offset-8">
+                <span className="italic font-normal text-ps-white underline decoration-ps-lblue decoration-2 underline-offset-8">
                   presencia
                 </span>
               </h1>
