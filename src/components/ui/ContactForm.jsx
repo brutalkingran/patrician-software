@@ -24,7 +24,7 @@ const ContactForm = () => {
     <form
       id="contact-form"
       onSubmit={handleSubmit(onSubmit)}
-      className="relative flex flex-col gap-5 w-full max-w-sm mx-auto lg:mx-0 bg-ps-cream p-8 shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-2 border-ps-blue/20 transition-all duration-300 before:content-[''] before:absolute before:inset-2 before:border before:border-ps-blue/20 before:pointer-events-none"
+      className="relative flex flex-col gap-5 w-full max-w-sm mx-auto lg:mx-0 bg-ps-cream p-8 shadow-[0_20px_50px_rgba(0,0,0,0.4)] border-2 border-ps-blue/20 transition-all duration-300 before:content-[''] before:absolute before:inset-2 before:border before:border-ps-blue/20 before:pointer-events-none mt-5"
     >
       {/* NOMBRE */}
       <div className="flex flex-col gap-1 relative z-10">
