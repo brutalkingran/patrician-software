@@ -93,7 +93,7 @@ const Footer = () => {
                 <div className="mt-1 text-ps-lblue">
                   <FaEnvelope size={15} />
                 </div>
-                <span className="break-all">contacto@patrician.com</span>
+                <span className="break-all">contacto@patrician-software.com</span>
               </div>
 
               <div className="flex items-start gap-3.5">

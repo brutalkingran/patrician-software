@@ -73,7 +73,7 @@ const PlanPage = () => {
               className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch"
             >
               {/* BÁSICO */}
-              <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:!w-full [&>div]:max-w-none">
+              <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:w-full! [&>div]:max-w-none">
                 <PlanCard
                   title="Primeros pasos"
                   realPrice="$ 589,807.50"
@@ -93,7 +93,7 @@ const PlanPage = () => {
               </motion.div>
 
               {/* EMPRENDEDOR - DESTACADO */}
-              <motion.div variants={itemVariants} className="flex w-full h-full md:-translate-y-3 [&>div]:!w-full [&>div]:max-w-none">
+              <motion.div variants={itemVariants} className="flex w-full h-full md:-translate-y-3 [&>div]:w-full! [&>div]:max-w-none">
                 <PlanCard
                   title="Emprendedor"
                   realPrice="$ 844,331.90"
@@ -115,7 +115,7 @@ const PlanPage = () => {
               </motion.div>
 
               {/* ÉLITE */}
-              <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:!w-full [&>div]:max-w-none">
+              <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:w-full! [&>div]:max-w-none">
                 <PlanCard
                   title="Élite"
                   realPrice="$ 1,317,531.90"

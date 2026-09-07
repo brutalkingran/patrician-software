@@ -41,7 +41,7 @@ const PlanCard = ({
         <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wide mb-1 text-ps-cream">
           {title}
         </h3>
-        <p className="font-serif italic text-xs sm:text-sm text-ps-cream/70 mb-5 min-h-[2.5rem] leading-relaxed">
+        <p className="font-serif italic text-xs sm:text-sm text-ps-cream/70 mb-5 min-h-10 leading-relaxed">
           {subtitle}
         </p>
 
