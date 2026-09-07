@@ -10,7 +10,7 @@ const PricesComponent = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ repeat: true, amount: 0.3 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="text-xl md:text-3xl text-center font-serif font-black tracking-tighter uppercase leading-none text-white/90 mb-6 md:mb-0 italic"
+        className="text-3xl msd:text-3xl text-center font-serif font-black leading-none text-white/90 mb-6 md:mb-0 uppercase tracking-[0.15em]"
       >
         ¿Qué estás esperando?
       </motion.h2>
@@ -20,8 +20,11 @@ const PricesComponent = () => {
       {/* Inyección de la animación restante del destello de fondo */}
       <style jsx global>{`
         @keyframes shimmer {
+          0% {
+            transform: translateX(-100%) skewX(-12deg);
+          }
           100% {
-            transform: translateX(100%);
+            transform: translateX(200%) skewX(-12deg);
           }
         }
       `}</style>
