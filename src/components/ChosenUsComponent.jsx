@@ -190,7 +190,7 @@ const ChosenUsComponent = () => {
             </h1>
         </h2>
 
-        <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mb-16">
+        <div className="w-full overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mb-16">
           <div className="w-full opacity-90">
             <motion.div
               className="flex w-max gap-16 items-center"
@@ -206,7 +206,7 @@ const ChosenUsComponent = () => {
                   key={index}
                   src={logo}
                   alt={`Logo ${index}`}
-                  className="h-16 md:h-20 w-auto object-contain flex-shrink-0"
+                  className="h-16 md:h-20 w-auto object-contain shrink-0"
                 />
               ))}
             </motion.div>

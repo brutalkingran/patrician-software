@@ -34,7 +34,7 @@ const Footer = () => {
               Servicios
             </h3>
 
-            <div className="w-9 h-[2px] bg-white mt-2.5 mb-5" />
+            <div className="w-9 h-0.5 bg-white mt-2.5 mb-5" />
 
             <ul className="space-y-3 text-sm text-gray-300">
               <li>
@@ -71,7 +71,7 @@ const Footer = () => {
               Contacto
             </h3>
 
-            <div className="w-9 h-[2px] bg-white mt-2.5 mb-5" />
+            <div className="w-9 h-0.5 bg-white mt-2.5 mb-5" />
 
             <div className="space-y-4 text-sm text-gray-300">
               <div className="flex items-start gap-3.5">
