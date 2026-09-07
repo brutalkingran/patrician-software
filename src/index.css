@@ -6,6 +6,13 @@
 @theme {
   --color-ps-blue: oklch(0.225 0.066 257.39);
   --color-ps-mblue: oklch(0.2178 0.0401 251.43);
+
+  /* Azul Celeste Imperial (Ideal para acentos, botones primarios, hovers o bordes) */
+  --color-ps-lblue: oklch(0.78 0.095 254.0);
+
+  /* Azul Mármol / Hielo (Ideal para badges, sombras suaves o fondos secundarios) */
+  --color-ps-ice: oklch(0.89 0.038 252.0);
+
   --color-ps-white: oklch(0.979 0.003 247.87);
   --color-ps-cream: oklch(0.95 0.04 85.0);
 }
