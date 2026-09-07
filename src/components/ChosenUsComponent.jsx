@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 import logo_1 from "/logos/grupo_aluminium_logo_hor_white.png"
 import logo_2 from "/logos/electro_logo_hor.png"
 import logo_3 from "/logos/manantial_logo.png"
-import logo_4 from "/logos/Distri_fandy.jpeg"
-import logo_5 from "/logos/queen.jpeg"
-import logo_6 from "/logos/airtotal.jpeg"
+import logo_4 from "/logos/Distri_fandy.png"
+import logo_5 from "/logos/queen.png"
+import logo_6 from "/logos/airtotal.svg"
 
 const logosCarrusel = [logo_1, logo_2, logo_3, logo_4, logo_5, logo_6]
 
@@ -206,7 +206,8 @@ const ChosenUsComponent = () => {
                   key={index}
                   src={logo}
                   alt={`Logo ${index}`}
-                  className="h-16 md:h-20 w-auto object-contain shrink-0"
+                  /* Agrega grayscale aquí */
+                  className="h-16 md:h-20 w-auto object-contain shrink-0 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 />
               ))}
             </motion.div>
