@@ -34,7 +34,7 @@ const LogoAnimado = () => {
       <motion.img
         initial={{ y: -50, opacity: 0 }}
         animate={textControls}
-        className="col-start-1 row-start-1 md:w-[350px]"
+        className="col-start-1 row-start-1 md:w-62.5"
         src={logo_text}
         draggable="false"
         alt="Logo Texto"
@@ -44,7 +44,7 @@ const LogoAnimado = () => {
       <motion.img
         initial={{ opacity: 0, scale: 0.2 }}
         animate={laurelControls}
-        className="col-start-1 row-start-1 md:w-[350px]"
+        className="col-start-1 row-start-1 md:w-70.5"
         src={logo_laurel}
         draggable="false"
         alt="Logo Laurel"
