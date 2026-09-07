@@ -3,21 +3,29 @@ import textura_mural from "/textura-mural.svg";
 import { useMural } from "../../context/MuralContext";
 
 const MuralAnimado = ({ direction }) => {
-  const { isDark } = useMural();
+  // Ahora el contexto puede retornar el color exacto (ej: "var(--color-ps-cream)")
+  const { muralColor } = useMural(); 
 
   return (
     <motion.div
-      className={`fixed top-0 ${direction} w-24 h-full bg-repeat-y bg-center bg-contain z-50 pointer-events-none`}
+      className={`fixed top-0 ${direction} w-24 h-full z-50 pointer-events-none`}
       style={{
-        backgroundImage: `url(${textura_mural})`,
+        WebkitMaskImage: `url(${textura_mural})`,
+        maskImage: `url(${textura_mural})`,
+        WebkitMaskRepeat: "repeat-y",
+        maskRepeat: "repeat-y",
+        WebkitMaskSize: "contain",
+        maskSize: "contain",
       }}
       animate={{
-        backgroundPositionY: ["0%", "120%"],
-        filter: isDark ? "invert(1) brightness(0.2)" : "invert(0) brightness(1)",
+        WebkitMaskPositionY: ["0px", "600px"],
+        maskPositionY: ["0px", "600px"],
+        backgroundColor: muralColor, // Color dinámico exacto de tu paleta
       }}
       transition={{
-        backgroundPositionY: { duration: 20, ease: "linear", repeat: Infinity },
-        filter: { duration: 0.4, ease: "easeInOut" } // Transición fluida al cambiar de sección
+        WebkitMaskPositionY: { duration: 20, ease: "linear", repeat: Infinity },
+        maskPositionY: { duration: 20, ease: "linear", repeat: Infinity },
+        backgroundColor: { duration: 0.5, ease: "easeInOut" }, // Transición de color suave
       }}
     />
   );
