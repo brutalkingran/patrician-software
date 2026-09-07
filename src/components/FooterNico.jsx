@@ -6,7 +6,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-[#06152B] text-white font-serif border-t border-white/20">
+    <footer className="relative overflow-hidden bg-ps-mblue text-ps-white font-serif border-t border-ps-cream/25">
 
       {/* Contenedor principal con padding para dejar espacio a los bordes laterales */}
       <div className="relative max-w-6xl mx-auto px-12 md:px-20 py-14">
@@ -33,50 +33,55 @@ const Footer = () => {
 
           {/* COLUMNA 2 */}
           <div>
-            <h3 className="text-base font-bold uppercase tracking-widest text-white">
+            <h3 className="text-base font-bold uppercase tracking-widest text-ps-white">
               Servicios
             </h3>
 
-            <div className="w-9 h-0.5 bg-white mt-2.5 mb-5" />
+            <div className="w-9 h-0.5 bg-ps-white mt-2 mb-2" />
 
-            <ul className="space-y-3 text-sm text-gray-300">
+            <ul className="space-y-2.5 text-sm text-ps-white">
               <li>
-                <a href="#" className="transition-colors hover:text-white">
+                <span className="transition-colors hover:text-ps-white">
                   Desarrollo Web
-                </a>
+                </span>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-white">
-                  Diseño Web
-                </a>
+                <span className="transition-colors hover:text-ps-white">
+                  Marketing
+                </span>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-white">
-                  Marketing Digital
-                </a>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-white">
+                <span className="transition-colors hover:text-ps-white">
                   SEO
-                </a>
+                </span>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-white">
-                  E-commerce
-                </a>
+                <span className="transition-colors hover:text-ps-white">
+                  Automatización
+                </span>
+              </li>
+              <li>
+                <span className="transition-colors hover:text-ps-white">
+                  Asesoría Tecnológica
+                </span>
+              </li>
+              <li>
+                <span className="transition-colors hover:text-ps-white">
+                  Community Manager
+                </span>
               </li>
             </ul>
           </div>
 
           {/* COLUMNA 3 */}
           <div>
-            <h3 className="text-base font-bold uppercase tracking-widest text-white">
+            <h3 className="text-base font-bold uppercase tracking-widest text-ps-white">
               Contacto
             </h3>
 
-            <div className="w-9 h-0.5 bg-white mt-2.5 mb-5" />
+            <div className="w-9 h-0.5 bg-ps-white mt-2 mb-2" />
 
-            <div className="space-y-4 text-sm text-gray-300">
+            <div className="space-y-4 text-sm text-ps-white">
               <div className="flex items-start gap-3.5">
                 <div className="mt-1 text-ps-lblue">
                   <FaMapMarkerAlt size={15} />
@@ -103,22 +108,13 @@ const Footer = () => {
         </div>
 
         {/* SEPARADOR */}
-        <div className="mt-12 h-px bg-white/20" />
+        <div className="mt-8 h-px bg-ps-white/20" />
 
         {/* PARTE INFERIOR */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6">
-          <p className="text-xs text-gray-400 text-center md:text-left">
-            © 2026 Patrician-software. Todos los derechos reservados.
+          <p className="text-xs text-ps-white/80 text-center md:text-left">
+            © 2026 Patrician Software. Todos los derechos reservados.
           </p>
-
-          {/* <div className="flex gap-6 text-xs text-gray-400">
-            <a href="#" className="transition-colors hover:text-white">
-              Política de Privacidad
-            </a>
-            <a href="#" className="transition-colors hover:text-white">
-              Términos y Condiciones
-            </a>
-          </div> */}
         </div>
 
       </div>
