@@ -3,10 +3,11 @@ import { createContext, useContext, useState } from "react";
 const MuralContext = createContext();
 
 export const MuralProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+  // Color por defecto (por ejemplo, el blanco de tu tema)
+  const [muralColor, setMuralColor] = useState("var(--color-ps-white)");
 
   return (
-    <MuralContext.Provider value={{ isDark, setIsDark }}>
+    <MuralContext.Provider value={{ muralColor, setMuralColor }}>
       {children}
     </MuralContext.Provider>
   );
