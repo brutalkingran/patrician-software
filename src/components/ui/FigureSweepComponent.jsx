@@ -37,7 +37,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
 
   return (
     <motion.div
-      className={`relative items-center justify-center w-full max-w-4xl aspect-3/1 mx-auto ${extraStyle} cool-texture [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]`}
+      className={`relative items-center justify-center w-full max-w-4xl aspect-3/1 mx-auto ${extraStyle} cool-texture mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]`}
       viewport={{ margin: "0px" }}
       onViewportEnter={() => setOnScreen(true)}
       onViewportLeave={() => setOnScreen(false)}
@@ -74,7 +74,7 @@ const FigureSweepComponent = ({ children, extraStyle }) => {
                   setCurrentPage(index);
                 }}
                 className={`
-              w-3 h-3 rounded-full transition-all duration-300 shadow-[#1a1a1a] cursor-pointer
+              w-3 h-3 rounded-full transition-all duration-300 shadow-ps-black cursor-pointer
               ${currentPage === index ? "bg-gray-400 scale-125" : "bg-gray-300 hover:bg-gray-500"}
             `}
               />
