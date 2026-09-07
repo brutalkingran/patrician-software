@@ -95,7 +95,7 @@ const Footer = () => {
                 <div className="mt-1 text-ps-lblue">
                   <FaClock size={15} />
                 </div>
-                <span>Lun - Vie: 9:00 - 18:00</span>
+                <span>Lun - Vie: 8:00 - 21:00</span>
               </div>
             </div>
           </div>
