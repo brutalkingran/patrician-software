@@ -111,10 +111,18 @@ const Footer = () => {
         <div className="mt-8 h-px bg-ps-white/20" />
 
         {/* PARTE INFERIOR */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6">
-          <p className="text-xs text-ps-white/80 text-center md:text-left">
+        <div className="mt-8 flex flex-col-reverse sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-ps-white/70 text-center sm:text-left font-sans">
             © 2026 Patrician Software. Todos los derechos reservados.
           </p>
+
+          <div className="flex items-center">
+            <img
+              src="logo_t.png"
+              className="h-6 sm:h-7 w-auto object-contain transition-opacity duration-300"
+              alt="Patrician Software Logo"
+            />
+          </div>
         </div>
 
       </div>
