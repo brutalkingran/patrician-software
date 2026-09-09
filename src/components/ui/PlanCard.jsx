@@ -30,8 +30,23 @@ const PlanCard = ({
       {/* INSIGNIA IMPERIAL RECOMENDADO */}
       {highlighted && (
         <div className="absolute top-4 right-4 z-20">
-          <span className="font-serif text-[10px] uppercase font-bold tracking-[0.2em] bg-ps-cream text-ps-blue px-3 py-1 border border-ps-cream shadow-md">
-            Recomendado
+          <span className="
+    relative overflow-hidden inline-flex items-center justify-center
+    bg-yellow-400 text-ps-blue font-serif text-[10px] uppercase font-bold tracking-[0.2em]
+    px-2.5 py-0.5
+    /* Bordes estilo bisel de lingote */
+    border-t border-l border-yellow-100 
+    border-b-2 border-r-2
+    shadow-sm
+  ">
+            {/* Brillo blanco oblicuo que atraviesa el lingote */}
+            <span className="
+      absolute inset-0 
+      bg-[linear-gradient(110deg,transparent_30%,rgba(255,255,255,0.9)_50%,transparent_70%)] 
+      -translate-x-full animate-[shimmer_2s_infinite]
+    " />
+
+            <span className="relative z-10">Recomendado</span>
           </span>
         </div>
       )}
@@ -84,7 +99,7 @@ const PlanCard = ({
           className={`
             relative overflow-hidden block w-full text-center py-3 px-4 font-serif text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 shadow-sm
             ${highlighted
-              ? "bg-ps-cream text-ps-blue hover:bg-ps-lblue hover:text-ps-blue border border-ps-cream"
+              ? "bg-ps-cream text-ps-blue hover:bg-ps-gold hover:text-ps-blue border border-ps-cream"
               : "bg-ps-white/10 text-ps-cream border border-ps-white/30 hover:bg-ps-cream hover:text-ps-blue"
             }
           `}
