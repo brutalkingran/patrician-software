@@ -49,8 +49,8 @@ const PlanPage = () => {
 
             {/* Encabezado */}
             <div className="w-full max-w-3xl mx-auto text-center mb-12 md:mb-16">
-              <span className="inline-block bg-ps-blue text-ps-cream px-3 py-1 text-xs tracking-[0.25em] font-serif font-bold uppercase mb-4 border border-ps-blue shadow-xs">
-                Inversión Estratégica
+              <span className="inline-block bg-ps-blue text-ps-green px-3 py-1 text-xs tracking-[0.25em] font-serif font-bold uppercase mb-4 border border-ps-blue shadow-xs">
+                - Inversión Estratégica -
               </span>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-4 text-ps-white">
