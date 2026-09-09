@@ -2,13 +2,38 @@ import Section from "./Section";
 import PhoneMockup from "./ui/PhoneMockup";
 import CarruselComponent from "./CarruselComponent";
 
+const IMAGENES_ELITE = [
+  "/patrician-instagram.jpeg",
+  "/electro hobby.jpeg",
+  "/airtotal.jpeg",
+  "/queen.jpeg",
+];
+
 const MENSAJES_EXPERTS = [
-  "Alto posicionamiento en redes y motores de búsqueda",
-  "Experiencia de usuario de calidad",
-  "Publicidad directa al público que más lo necesita",
-  "Automatización",
-  "Abarcamos público angloparlante",
-  "¿Algo más? Dejá que nuestros proyectos hablen por nosotros",
+  <>
+    <strong className="font-bold text-ps-blue">Alto posicionamiento</strong> en redes y motores de búsqueda.
+  </>,
+  <>
+    <strong className="font-bold text-ps-blue">Experiencia de usuario</strong> de máxima calidad.
+  </>,
+  <>
+    <strong className="font-bold text-ps-blue">Publicidad directa</strong> al{" "}
+    <strong className="text-ps-green font-extrabold underline decoration-ps-green underline-offset-2">
+      público que más lo necesita.
+    </strong>
+  </>,
+  <>
+    <strong className="font-bold text-ps-blue">Automatización</strong> e integración de procesos.
+  </>,
+  <>
+    <strong className="font-bold text-ps-blue">Alcance global:</strong> Abarcamos público angloparlante.
+  </>,
+  <>
+    <strong className="italic text-ps-blue font-bold">¿Algo más?</strong>{" "}
+    <span className="underline decoration-ps-blue decoration-2 underline-offset-4 font-semibold text-ps-blue">
+      Dejá que nuestros proyectos hablen por nosotros.
+    </span>
+  </>,
 ];
 
 const EliteSection = ({ index = 0 }) => {
@@ -30,7 +55,7 @@ const EliteSection = ({ index = 0 }) => {
       messages={MENSAJES_EXPERTS}
     >
       <PhoneMockup>
-        <CarruselComponent />
+        <CarruselComponent images={IMAGENES_ELITE} />
       </PhoneMockup>
     </Section>
   );
