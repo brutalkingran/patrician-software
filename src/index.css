@@ -17,6 +17,12 @@
   --color-ps-cream: oklch(0.95 0.04 85.0);
 
   --color-ps-black: #1a1a1a;
+
+  /* Verde Claro / Métricas (Para fondos oscuros) */
+  --color-ps-green: #10b981;
+
+  /* Verde Oscuro / Esmeralda Profundo (Ideal para textos, resaltados y legibilidad sobre ps-cream) */
+  --color-ps-dgreen: #047857;
 }
 
 @layer base {
