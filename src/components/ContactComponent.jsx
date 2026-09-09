@@ -21,7 +21,7 @@ const ContactComponent = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* COLUMNA IZQUIERDA - FORMULARIO */}
           <div className="w-full flex flex-col items-center lg:items-start justify-start h-full">
-            <h1 className="font-serif text-xs md:text-sm uppercase tracking-[0.25em] text-ps-cream/90 font-medium">
+            <h1 className="font-serif text-xs md:text-sm uppercase tracking-[0.25em] text-ps-white font-medium">
               Contactate con nosotros
             </h1>
 
@@ -32,7 +32,7 @@ const ContactComponent = () => {
           <div className="w-full flex flex-col items-center lg:items-start justify-start h-full">
             {/* TÍTULO TIPO INSCRIPCIÓN */}
             <div className="flex items-center gap-3 mb-5">
-              <h2 className="font-serif text-xs md:text-sm uppercase tracking-[0.25em] text-ps-cream/90 font-medium">
+              <h2 className="font-serif text-xs md:text-sm uppercase tracking-[0.25em] text-ps-white font-medium">
                 Seguinos
               </h2>
             </div>
@@ -46,7 +46,7 @@ const ContactComponent = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="group relative w-12 h-12 flex items-center justify-center bg-ps-cream text-ps-blue border border-ps-cream/80 shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-ps-white hover:border-ps-lblue hover:shadow-xl before:content-[''] before:absolute before:inset-1 before:border before:border-ps-blue/20 before:pointer-events-none"
+                  className="group relative w-12 h-12 flex items-center justify-center bg-ps-white text-ps-blue border border-ps-cream/80 shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-ps-white hover:border-ps-lblue hover:shadow-xl before:content-[''] before:absolute before:inset-1 before:border before:border-ps-blue/20 before:pointer-events-none"
                 >
                   {/* CAPA DE TEXTURA CON OVERLAY Y POSICIÓN DINÁMICA */}
                   <div
