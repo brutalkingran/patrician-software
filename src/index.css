@@ -21,8 +21,14 @@
   /* Verde Claro / Métricas (Para fondos oscuros) */
   --color-ps-green: #10b981;
 
-  /* Verde Oscuro / Esmeralda Profundo (Ideal para textos, resaltados y legibilidad sobre ps-cream) */
+  /* Verde Oscuro / Esmeralda Profundo (Ideal para textos y legibilidad sobre ps-cream) */
   --color-ps-dgreen: #047857;
+
+  /* 👑 Dorado Imperial (Acentos, insignias, hovers y detalles en fondos oscuros) */
+  --color-ps-gold: oklch(0.78 0.13 78.0);
+
+  /* 🏛️ Dorado Oscuro / Bronce (Ideal para resaltar texto sobre ps-cream o ps-white) */
+  --color-ps-dgold: oklch(0.52 0.12 75.0);
 }
 
 @layer base {

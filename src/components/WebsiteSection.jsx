@@ -28,12 +28,10 @@ const BENIFICIOS_WEBSITE = [
   </>,
 ];
 
-const WebsiteSection = ({ index = 1 }) => {
-  const mediaPosition = index % 2 === 0 ? "left" : "right";
-
+const WebsiteSection = ({ variant = "blue", mediaPosition = "right" }) => {
   return (
     <Section
-      index={index}
+      variant={variant}
       mediaPosition={mediaPosition}
       title={
         <>

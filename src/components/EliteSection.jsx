@@ -36,10 +36,10 @@ const MENSAJES_EXPERTS = [
   </>,
 ];
 
-const EliteSection = ({ index = 0 }) => {
+const EliteSection = ({ variant = "cream", mediaPosition = "right" }) => {
   return (
     <Section
-      index={index}
+      variant={variant}
       mediaPosition="left"
       title={
         <>

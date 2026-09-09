@@ -2,6 +2,67 @@ import { motion } from "framer-motion";
 import TextTicker from "./ui/TextTicker";
 import { useMural } from "../context/MuralContext";
 
+const THEMES = {
+  cream: {
+    bg: "bg-ps-cream",
+    text: "text-ps-blue",
+    subtitle: "text-ps-blue/80",
+    description: "text-ps-blue/90",
+    tag: "bg-ps-blue text-ps-white border-ps-blue",
+    defaultMuralEnter: "var(--color-ps-black)",
+    defaultMuralLeave: "var(--color-ps-white)",
+  },
+  blue: {
+    bg: "bg-ps-mblue md:bg-ps-blue",
+    text: "text-ps-white",
+    subtitle: "text-ps-white/90",
+    description: "text-ps-white/90",
+    tag: "bg-ps-cream text-ps-blue border-ps-cream",
+    defaultMuralEnter: "var(--color-ps-blue)",
+    defaultMuralLeave: "var(--color-ps-cream)",
+  },
+  // 👑 TEMA 1: Dorado Imperial (Ideal para secciones destacadas/premium)
+  gold: {
+    bg: "bg-ps-gold",
+    text: "text-ps-blue",
+    subtitle: "text-ps-blue/85",
+    description: "text-ps-blue/90",
+    tag: "bg-ps-blue text-ps-gold border-ps-blue",
+    defaultMuralEnter: "var(--color-ps-gold)",
+    defaultMuralLeave: "var(--color-ps-cream)",
+  },
+  // 📈 TEMA 2: Verde Métricas (Ideal para retornos, resultados y crecimiento)
+  green: {
+    bg: "bg-ps-green",
+    text: "text-ps-blue",
+    subtitle: "text-ps-blue/85",
+    description: "text-ps-blue/90",
+    tag: "bg-ps-blue text-ps-green border-ps-blue",
+    defaultMuralEnter: "var(--color-ps-green)",
+    defaultMuralLeave: "var(--color-ps-cream)",
+  },
+  // 🚀 NUEVO TEMA: Celeste Imperial (lblue)
+  lblue: {
+    bg: "bg-ps-lblue",
+    text: "text-ps-blue",
+    subtitle: "text-ps-blue/85",
+    description: "text-ps-blue/90",
+    tag: "bg-ps-blue text-ps-white border-ps-blue",
+    defaultMuralEnter: "var(--color-ps-lblue)",
+    defaultMuralLeave: "var(--color-ps-cream)",
+  },
+  // 🚀 NUEVO TEMA: Azul Hielo (ice)
+  ice: {
+    bg: "bg-ps-ice",
+    text: "text-ps-blue",
+    subtitle: "text-ps-blue/80",
+    description: "text-ps-blue/90",
+    tag: "bg-ps-blue text-ps-white border-ps-blue",
+    defaultMuralEnter: "var(--color-ps-ice)",
+    defaultMuralLeave: "var(--color-ps-white)",
+  },
+};
+
 const Section = ({
   title,
   subtitle,
@@ -9,8 +70,7 @@ const Section = ({
   description,
   messages,
   children,
-  variant, // "cream" | "blue"
-  index,   // opcional: si le pasás el índice (0, 1, 2...), calcula autom. par (cream) / impar (blue)
+  variant = "cream", // "cream" | "blue"
   mediaPosition = "left", // "left" | "right"
   muralEnterColor,
   muralLeaveColor,
@@ -18,43 +78,20 @@ const Section = ({
 }) => {
   const { setMuralColor } = useMural();
 
-  // Determina si la sección es variante crema o azul (por prop explícita o por índice)
-  const isBlue =
-    variant === "blue" || (typeof index === "number" && index % 2 !== 0);
-
-  // Paleta de estilos según la variante
-  const styles = isBlue
-    ? {
-      bg: "bg-ps-mblue md:bg-ps-blue",
-      text: "text-ps-white",
-      subtitle: "text-ps-white",
-      description: "text-ps-white",
-      tag: "bg-ps-cream text-ps-blue border-ps-cream",
-      muralEnter: muralEnterColor || "var(--color-ps-blue)",
-      muralLeave: muralLeaveColor || "var(--color-ps-cream)",
-    }
-    : {
-      bg: "bg-ps-cream",
-      text: "text-ps-blue",
-      subtitle: "text-ps-blue/80",
-      description: "text-ps-blue/90",
-      tag: "bg-ps-blue text-ps-white border-ps-blue",
-      muralEnter: muralEnterColor || "var(--color-ps-black)",
-      muralLeave: muralLeaveColor || "var(--color-ps-white)",
-    };
-
+  const theme = THEMES[variant] || THEMES.cream;
+  const muralEnter = muralEnterColor || theme.defaultMuralEnter;
+  const muralLeave = muralLeaveColor || theme.defaultMuralLeave;
   const isMediaRight = mediaPosition === "right";
 
   return (
     <motion.section
-      className={`relative z-10 w-full ${styles.bg} ${styles.text} py-16 md:py-24 px-4 md:px-8 overflow-hidden`}
-      onViewportEnter={() => setMuralColor(styles.muralEnter)}
-      onViewportLeave={() => setMuralColor(styles.muralLeave)}
+      className={`relative z-10 w-full ${theme.bg} ${theme.text} py-16 md:py-24 px-4 md:px-8 overflow-hidden`}
+      onViewportEnter={() => setMuralColor(muralEnter)}
+      onViewportLeave={() => setMuralColor(muralLeave)}
       viewport={{ amount: 0.2 }}
     >
       <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-        {/* Slot / Children para el Chiche (Celular, Imagen, etc.) */}
+        {/* Slot / Children para el Chiche (Celular, Imagen, Tablet, etc.) */}
         {children && (
           <motion.div
             initial={{ opacity: 0, x: isMediaRight ? 50 : -50 }}
@@ -91,7 +128,7 @@ const Section = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className={`font-serif text-base md:text-lg italic ${styles.subtitle} mb-5 leading-relaxed`}
+              className={`font-serif text-base md:text-lg italic ${theme.subtitle} mb-5 leading-relaxed`}
             >
               {subtitle}
             </motion.p>
@@ -103,11 +140,11 @@ const Section = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className={`font-serif text-sm md:text-base ${styles.description} mb-4 leading-relaxed`}
+              className={`font-serif text-sm md:text-base ${theme.description} mb-4 leading-relaxed`}
             >
               {tag && (
                 <span
-                  className={`inline-block px-1.5 py-0.5 text-[0.80rem] tracking-widest font-bold uppercase mr-0.3 shadow-xs border ${styles.tag}`}
+                  className={`inline-block px-1.5 py-0.5 text-[0.80rem] tracking-widest font-bold uppercase mr-1 shadow-xs border ${theme.tag}`}
                 >
                   {tag}
                 </span>
@@ -124,7 +161,6 @@ const Section = ({
           {/* Slot para contenido extra */}
           {extraContent}
         </div>
-
       </div>
     </motion.section>
   );

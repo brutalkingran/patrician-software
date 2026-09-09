@@ -34,12 +34,10 @@ const BENEFICIOS_MARKETING = [
   </>,
 ];
 
-const MarketingSection = ({ index = 2 }) => {
-  const mediaPosition = index % 2 === 0 ? "left" : "right";
-
+const MarketingSection = ({ variant = "cream", mediaPosition = "left" }) => {
   return (
     <Section
-      index={index}
+      variant={variant}
       mediaPosition={mediaPosition}
       title={
         <>
