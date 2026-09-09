@@ -2,7 +2,7 @@ const TabletMockup = ({ children }) => {
   return (
     <div className="relative mx-auto w-full max-w-lg sm:max-w-xl md:max-w-2xl flex flex-col items-center select-none">
       {/* CUERPO PRINCIPAL DE LA TABLET (HORIZONTAL) */}
-      <div className="relative w-full aspect-[16/10] bg-gray-950 rounded-[2rem] p-3 sm:p-4 border-4 border-gray-800/90 shadow-2xl">
+      <div className="relative w-full aspect-16/10 bg-gray-950 rounded-4xl p-3 sm:p-4 border-4 border-gray-800/90 shadow-2xl">
 
         {/* BOTÓN FÍSICO SUPERIOR (POWER) */}
         <div className="w-10 h-0.75 bg-gray-700 absolute -top-1 right-12 rounded-t-sm" />
