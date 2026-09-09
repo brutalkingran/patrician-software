@@ -25,7 +25,7 @@ const Footer = () => {
               <dt className="text-1xl font-serif font-semibold tracking-wide">
                 Patrician <span className="italic text-sm">(sust.)</span>
               </dt>
-              <dd className="mt-1 leading-relaxed font-light font-serif pl-3 text-sm">
+              <dd className="mt-1 leading-relaxed font-light font-serif pl-3 text-sm italic">
                 Figura suprema de la élite, forjada en la cima del orden social, cuya sola presencia encarna poder, prestigio y autoridad.
               </dd>
             </dl>
