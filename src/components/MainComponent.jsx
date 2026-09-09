@@ -32,8 +32,7 @@ const MainComponent = () => {
 
         {/* SEPARADOR Y ETIQUETA DE CONTACTO */}
         <div className="flex flex-col items-center gap-2 mt-2">
-          <span className="w-12 h-px bg-ps-lblue/40" />
-          <p className="font-serif text-xs md:text-sm uppercase tracking-[0.3em] text-ps-cream/80 font-normal">
+          <p className="font-serif text-xs md:text-sm uppercase tracking-[0.3em] text-ps-white font-normal">
             Contáctenos
           </p>
         </div>
