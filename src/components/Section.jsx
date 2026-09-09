@@ -26,9 +26,9 @@ const Section = ({
   const styles = isBlue
     ? {
       bg: "bg-ps-mblue md:bg-ps-blue",
-      text: "text-ps-cream",
-      subtitle: "text-ps-cream/80",
-      description: "text-ps-cream/90",
+      text: "text-ps-white",
+      subtitle: "text-ps-white",
+      description: "text-ps-white",
       tag: "bg-ps-cream text-ps-blue border-ps-cream",
       muralEnter: muralEnterColor || "var(--color-ps-blue)",
       muralLeave: muralLeaveColor || "var(--color-ps-cream)",
@@ -38,7 +38,7 @@ const Section = ({
       text: "text-ps-blue",
       subtitle: "text-ps-blue/80",
       description: "text-ps-blue/90",
-      tag: "bg-ps-blue text-ps-cream border-ps-blue",
+      tag: "bg-ps-blue text-ps-white border-ps-blue",
       muralEnter: muralEnterColor || "var(--color-ps-black)",
       muralLeave: muralLeaveColor || "var(--color-ps-white)",
     };
@@ -107,7 +107,7 @@ const Section = ({
             >
               {tag && (
                 <span
-                  className={`inline-block px-2.5 py-0.5 text-xs tracking-widest font-bold uppercase mr-2 shadow-xs border ${styles.tag}`}
+                  className={`inline-block px-1.5 py-0.5 text-[0.80rem] tracking-widest font-bold uppercase mr-0.3 shadow-xs border ${styles.tag}`}
                 >
                   {tag}
                 </span>
