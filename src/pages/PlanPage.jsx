@@ -45,7 +45,7 @@ const PlanPage = () => {
           className="relative min-h-screen bg-ps-blue text-ps-ice px-4 sm:px-6 pt-24 sm:pt-32 pb-20 flex flex-col items-center overflow-hidden"
         >
 
-          <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
+          <div className="relative z-51 w-full max-w-7xl mx-auto flex flex-col items-center">
 
             {/* Encabezado */}
             <div className="w-full max-w-3xl mx-auto text-center mb-12 md:mb-16">
