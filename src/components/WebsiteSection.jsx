@@ -1,5 +1,12 @@
+import CarruselComponent from "./CarruselComponent";
 import Section from "./Section";
 import LaptopMockup from "./ui/LaptopMockup";
+
+const IMAGENES_PAGINAS = [
+  "/img/eh.png",
+  "/img/queen.png",
+  "/img/air.png",
+]
 
 const BENIFICIOS_WEBSITE = [
   <>
@@ -48,11 +55,7 @@ const WebsiteSection = ({ variant = "blue", mediaPosition = "right" }) => {
     >
       <div className="flex flex-col">
         <LaptopMockup>
-          <img
-            src="/img/electro_d.png"
-            alt="Vista previa sitio web"
-            className="w-full h-full object-cover object-top"
-          />
+          <CarruselComponent images={IMAGENES_PAGINAS} />
         </LaptopMockup>
         <p className="mt-4 text-xs md:text-sm opacity-80 italic border-l-2 border-ps-lblue/50 pl-3 leading-relaxed">
           Piense en aplicaciones que automaticen tareas tediosas o tiendas donde comprar sea una experiencia fluida y conveniente para sus clientes.
