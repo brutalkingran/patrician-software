@@ -18,6 +18,23 @@ const ProjectsSection = ({ variant = "blue" }) => {
     return p.category === filter;
   });
 
+  // Mapeo exclusivo de color de texto según la categoría
+  const getTabTextColor = (tabId, isActive) => {
+    if (isActive) {
+      return isDark
+        ? "bg-ps-gold text-ps-blue font-bold shadow-md shadow-ps-gold/20"
+        : "bg-ps-blue text-ps-white shadow-md";
+    }
+
+    if (tabId === "software") {
+      return isDark ? "text-ps-lblue hover:text-ps-white" : "text-ps-blue hover:text-ps-mblue";
+    }
+    if (tabId === "marketing") {
+      return isDark ? "text-ps-green hover:text-ps-green/80" : "text-ps-dgreen hover:text-ps-dgreen/80";
+    }
+    return isDark ? "text-ps-white/70 hover:text-ps-white" : "text-ps-blue/70 hover:text-ps-blue";
+  };
+
   return (
     <section className="w-full py-12 px-4 md:px-8 max-w-5xl mx-auto">
       {/* Cabecera y Filtros */}
@@ -37,7 +54,7 @@ const ProjectsSection = ({ variant = "blue" }) => {
           </h2>
         </div>
 
-        {/* Tab de Filtros con auto-contraste */}
+        {/* Tab de Filtros con colores de texto diferenciados */}
         <div
           className={`font-mono flex p-1 rounded-xl border backdrop-blur-md transition-colors ${isDark
               ? "bg-ps-white/10 border-ps-white/15"
@@ -52,14 +69,7 @@ const ProjectsSection = ({ variant = "blue" }) => {
                 onClick={() => setFilter(tab.id)}
                 className={`
                   relative px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all duration-200 cursor-pointer
-                  ${isActive
-                    ? isDark
-                      ? "bg-ps-gold text-ps-blue font-bold shadow-md shadow-ps-gold/20"
-                      : "bg-ps-blue text-ps-white shadow-md"
-                    : isDark
-                      ? "text-ps-white/70 hover:text-ps-white"
-                      : "text-ps-blue/70 hover:text-ps-blue"
-                  }
+                  ${getTabTextColor(tab.id, isActive)}
                 `}
               >
                 {tab.label}

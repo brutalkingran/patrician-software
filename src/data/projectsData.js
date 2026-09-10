@@ -33,28 +33,6 @@ export const PROJECTS_DATA = [
     ],
   },
   {
-    id: "stock",
-    title: "Patrician Stock (Gestor de Inventario)",
-    category: "software",
-    image: "/img/stock2.jpeg",
-    url: "#",
-    virtues: [
-      { value: "Facturación", label: "Cotización Automática" },
-      { value: "Gestión", label: "Rapidez" },
-    ],
-  },
-  {
-    id: "budget",
-    title: "BudgetMaker (Presupuestador Automatizado)",
-    category: "software",
-    image: "/img/prep.png",
-    url: "https://swk.lyricaltokarev.com/",
-    virtues: [
-      { value: "Rapidez", label: "Presupuestos PDF" },
-      { value: "< 5 min", label: "Generación Rápida" },
-    ],
-  },
-  {
     id: "electrohobby_mkt",
     title: "Campaña Electro Hobby",
     category: "marketing",
@@ -85,6 +63,28 @@ export const PROJECTS_DATA = [
     virtues: [
       { value: "+40%", label: "Conversión Ventas" },
       { value: "120k", label: "Impresiones Meta" },
+    ],
+  },
+  {
+    id: "stock",
+    title: "Patrician Stock - Gestor de Inventario (Próximamente)",
+    category: "software",
+    image: "/img/stock2.jpeg",
+    url: "#",
+    virtues: [
+      { value: "Facturación", label: "Cotización Automática" },
+      { value: "Gestión", label: "Rapidez" },
+    ],
+  },
+  {
+    id: "budget",
+    title: "BudgetMaker - Presupuestador Automatizado (Próximamente)",
+    category: "software",
+    image: "/img/prep.png",
+    url: "https://swk.lyricaltokarev.com/",
+    virtues: [
+      { value: "Rapidez", label: "Presupuestos PDF" },
+      { value: "< 5 min", label: "Generación Rápida" },
     ],
   },
 ];

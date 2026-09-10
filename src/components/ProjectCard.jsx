@@ -5,6 +5,17 @@ const ProjectCard = ({ project }) => {
   const { title, category, image, url, virtues } = project;
   const Component = url ? "a" : "div";
 
+  const isSoftware = category === "software";
+
+  // Colores dinámicos sutiles según la categoría
+  const categoryTextColor = isSoftware ? "text-ps-lblue" : "text-ps-green";
+  const hoverBorderColor = isSoftware
+    ? "group-hover:border-ps-lblue/50"
+    : "group-hover:border-ps-green/50";
+  const badgeBorderColor = isSoftware
+    ? "border-ps-lblue/30 bg-ps-lblue/10"
+    : "border-ps-green/30 bg-ps-green/10";
+
   return (
     <motion.div
       layout
@@ -43,18 +54,22 @@ const ProjectCard = ({ project }) => {
           />
         </div>
 
-        {/* Degradado estilo Steam Replay para legibilidad de tipografía */}
+        {/* Degradado para legibilidad */}
         <div className="absolute inset-0 bg-linear-to-t from-ps-blue via-ps-blue/60 to-ps-blue/10 group-hover:via-ps-blue/40 transition-colors duration-300" />
 
-        {/* Borde sutil brillante en hover */}
-        <div className="absolute inset-0 rounded-2xl border border-ps-lblue/0 group-hover:border-ps-lblue/40 transition-colors duration-300 pointer-events-none" />
+        {/* Borde sutil dinámico que reacciona al hover según la categoría */}
+        <div
+          className={`absolute inset-0 rounded-2xl border border-transparent transition-colors duration-300 pointer-events-none ${hoverBorderColor}`}
+        />
 
         {/* Contenido Superior: Categoría y Título */}
         <div className="relative z-10 p-4 flex flex-col justify-between h-full">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <span className="text-[9px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 text-ps-lblue backdrop-blur-xs">
-                {category === "software" ? "Software" : "Paid Media"}
+              <span
+                className={`text-[9px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 rounded border backdrop-blur-xs ${categoryTextColor} ${badgeBorderColor}`}
+              >
+                {isSoftware ? "Software" : "Paid Media"}
               </span>
               <h3 className="text-lg md:text-xl font-serif font-bold text-ps-white mt-1.5 leading-tight drop-shadow-md">
                 {title}
