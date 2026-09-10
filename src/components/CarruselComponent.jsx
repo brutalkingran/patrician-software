@@ -55,6 +55,9 @@ const CarruselComponent = ({ images = [] }) => {
     )
   }
 
+  const currentItem = images[index]
+  const isVideo = typeof currentItem === "string" && currentItem.endsWith(".mp4")
+
   return (
     <div className="w-full h-full bg-ps-blue relative overflow-hidden touch-pan-y">
       <AnimatePresence mode="popLayout" custom={direccion}>
@@ -65,7 +68,7 @@ const CarruselComponent = ({ images = [] }) => {
           initial="enter"
           animate="center"
           exit="exit"
-          drag="x" // Activo en móviles y escritorio
+          drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.6}
           onDragEnd={manejarDragEnd}
@@ -75,14 +78,26 @@ const CarruselComponent = ({ images = [] }) => {
           }}
           className="absolute inset-0 w-full h-full bg-ps-mblue select-none cursor-grab active:cursor-grabbing"
         >
-          <img
-            src={images[index]}
-            alt={`Trabajo realizado ${index + 1}`}
-            className="w-full h-full object-cover pointer-events-none"
-            onError={(e) => {
-              e.target.style.display = "none"
-            }}
-          />
+          {/* SLIDE PRINCIPAL: Detecta si es Video o Imagen */}
+          {isVideo ? (
+            <video
+              src={currentItem}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover pointer-events-none"
+            />
+          ) : (
+            <img
+              src={currentItem}
+              alt={`Trabajo realizado ${index + 1}`}
+              className="w-full h-full object-cover pointer-events-none"
+              onError={(e) => {
+                e.target.style.display = "none"
+              }}
+            />
+          )}
 
           <div className="absolute inset-0 flex items-center justify-center text-xs font-semibold text-ps-white/10 uppercase tracking-widest pointer-events-none">
             Patrician Case
@@ -90,13 +105,15 @@ const CarruselComponent = ({ images = [] }) => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Puntos indicativos */}
+      {/* PUNTOS INDICATIVOS (DOTS) */}
       {images.length > 1 && (
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 pointer-events-none">
           {images.map((_, i) => (
             <span
               key={i}
-              className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-4 bg-ps-lblue" : "w-1.5 bg-ps-white/30"
+              className={`h-1.5 rounded-full transition-all duration-300 ${i === index
+                  ? "w-4 bg-ps-gold"
+                  : "w-1.5 bg-ps-white/40"
                 }`}
             />
           ))}

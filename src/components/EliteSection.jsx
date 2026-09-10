@@ -2,7 +2,8 @@ import Section from "./Section";
 import PhoneMockup from "./ui/PhoneMockup";
 import CarruselComponent from "./CarruselComponent";
 
-const IMAGENES_ELITE = [
+const MEDIA_ELITE = [
+  "/Secuencia 01_1.mp4",
   "/patrician-instagram.jpeg",
   "/electro hobby.jpeg",
   "/airtotal.jpeg",
@@ -55,7 +56,7 @@ const EliteSection = ({ variant = "cream", mediaPosition = "right" }) => {
       messages={MENSAJES_EXPERTS}
     >
       <PhoneMockup>
-        <CarruselComponent images={IMAGENES_ELITE} />
+        <CarruselComponent images={MEDIA_ELITE} />
       </PhoneMockup>
     </Section>
   );

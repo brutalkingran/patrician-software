@@ -1,5 +1,6 @@
 import FigureSweepComponent from "./ui/FigureSweepComponent";
 import ImageComponent from "./ui/ImageComponent";
+import VideoComponent from "./ui/VideoComponent";
 import { Subtitle, Title } from "./ui/TextComponents";
 
 const ExpertsComponents = () => {
@@ -51,18 +52,16 @@ const ExpertsComponents = () => {
             link={"https://google.com"}
             description={"Comprar en tu emprendimiento jamás había sido tan conveniente."}
           />
-          <ImageComponent
-            imgSrcMbl={"/img/electro_m.jpg"}
-            imgSrcDsktp={"/img/electro_d.png"}
-            title={"Aaaa"}
-            alt={"A"}
+          <VideoComponent
+            videoSrc={"/Secuencia 01_1.mp4"}
+            title={"Demostración interactiva"}
             link={"https://google.com"}
-            description={"ASD"}
+            description={"Campaña en movimiento y dinamismo visual."}
           />
         </FigureSweepComponent>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default ExpertsComponents;
