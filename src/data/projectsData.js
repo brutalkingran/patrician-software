@@ -70,7 +70,7 @@ export const PROJECTS_DATA = [
     title: "Patrician Stock - Gestor de Inventario (Próximamente)",
     category: "software",
     image: "/img/stock2.jpeg",
-    url: "#",
+    url: null,
     virtues: [
       { value: "Facturación", label: "Cotización Automática" },
       { value: "Gestión", label: "Rapidez" },
@@ -81,10 +81,34 @@ export const PROJECTS_DATA = [
     title: "BudgetMaker - Presupuestador Automatizado (Próximamente)",
     category: "software",
     image: "/img/prep.png",
-    url: "https://swk.lyricaltokarev.com/",
+    url: null,
     virtues: [
       { value: "Rapidez", label: "Presupuestos PDF" },
       { value: "< 5 min", label: "Generación Rápida" },
     ],
   },
 ];
+
+// {
+  //   id: "viajes",
+  //   title: "Tu Web de Turismo",
+  //   category: "software",
+  //   image: "/img/IDEargentina-index.webp",
+  //   url: "https://swk.lyricaltokarev.com/",
+  //   virtues: [
+  //     { value: "+300", label: "Productos Activos" },
+  //     { value: "24/7", label: "Stock Sincronizado" },
+  //   ],
+  // },
+  
+  // {
+  //   id: "spatium",
+  //   title: "Spatium Turismo",
+  //   category: "software",
+  //   image: "/img/spatium.webp",
+  //   url: "https://spatiumviajes.netlify.app/",
+  //   virtues: [
+  //     { value: "100%", label: "Automatizado" },
+  //     { value: "< 1s", label: "Carga Ultra-Rápida" },
+  //   ],
+  // },
