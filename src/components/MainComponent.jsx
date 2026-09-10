@@ -45,7 +45,7 @@ const MainComponent = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Contactar a Patrician Software por WhatsApp" 
-            href="https://wa.me"
+            href="https://wa.me/5493834091942?text=hola,%20estoy%20interesado%20en%20una%20reuni%C3%B3n%20presencial"
             className="relative z-10 flex items-center justify-center w-11 h-11 text-ps-white transition-all duration-300 hover:scale-115 hover:text-ps-lblue" 
           >
             <AiOutlineWhatsApp className="w-7 h-7 md:w-8 md:h-8" />
@@ -56,7 +56,7 @@ const MainComponent = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Visitar a Patrician Software en Instagram" 
-            href="https://instagram.com"
+            href="https://www.instagram.com/patrician.mkt/"
             className="relative z-10 flex items-center justify-center w-11 h-11 text-ps-white transition-all duration-300 hover:scale-115 hover:text-ps-lblue" 
           >
             <FaInstagram className="w-7 h-7 md:w-8 md:h-8" />
@@ -67,7 +67,7 @@ const MainComponent = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Contactar a Patrician Software por e-Mail" 
-            href="mailto:services@patrician-software.com"
+            href="mailto:admin@patrician-software.com"
             className="relative z-10 flex items-center justify-center w-11 h-11 text-ps-white transition-all duration-300 hover:scale-115 hover:text-ps-lblue" 
           >
             <AiOutlineMail className="w-7 h-7 md:w-8 md:h-8" />

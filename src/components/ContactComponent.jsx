@@ -3,9 +3,9 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import ContactForm from "./ui/ContactForm";
 
 const socialLinks = [
-  { icon: FaFacebookF, label: "Facebook", href: "#" },
-  { icon: FaInstagram, label: "Instagram", href: "#" },
-  { icon: FaWhatsapp, label: "WhatsApp", href: "#" },
+  { icon: FaFacebookF, label: "Facebook", href: "https://www.facebook.com/people/Patrician-Software-MKT/61573901501366/" },
+  { icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/patrician.mkt/" },
+  { icon: FaWhatsapp, label: "WhatsApp", href: "https://wa.me/5493834091942?text=hola,%20estoy%20interesado%20en%20una%20reuni%C3%B3n%20presencial" },
 ];
 
 const ContactComponent = () => {

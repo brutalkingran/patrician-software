@@ -7,7 +7,7 @@ const FooterComponent = () => {
 
   return (
     <footer>
-      <button onClick={() => navigate('/test')} className="font-serif fixed right-1 md:right-5 bottom-2 md:bottom-5 rounded-4xl px-5 py-2 bg-ps-white text-center text-ps-blue text-sm md:text-base z-90 cursor-pointer transition-all hover:text-ps-white hover:bg-ps-mblue hover:scale-105 hover:skew-y-2 flex flex-row items-center gap-3 opacity-90">
+      {/* <button onClick={() => navigate('/test')} className="font-serif fixed right-1 md:right-5 bottom-2 md:bottom-5 rounded-4xl px-5 py-2 bg-ps-white text-center text-ps-blue text-sm md:text-base z-90 cursor-pointer transition-all hover:text-ps-white hover:bg-ps-mblue hover:scale-105 hover:skew-y-2 flex flex-row items-center gap-3 opacity-90">
         <FiAlertCircle className="w-8 h-8" />
         <div>
           <p>¿Querés saber cómo podemos ayudarte?</p>
@@ -16,7 +16,7 @@ const FooterComponent = () => {
             <p className="font-bold">Resolvé este sencillo test</p>
           </div>
         </div>
-      </button>
+      </button> */}
     </footer>
   )
 }

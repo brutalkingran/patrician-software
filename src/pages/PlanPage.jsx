@@ -42,7 +42,7 @@ const PlanPage = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative min-h-screen bg-ps-blue text-ps-ice px-4 sm:px-6 pt-24 sm:pt-32 pb-20 flex flex-col items-center overflow-hidden"
+          className="relative min-h-screen bg-ps-blue text-ps-ice px-4 sm:px-6 pt-24 sm:pt-5 pb-20 flex flex-col items-center overflow-hidden"
         >
 
           <div className="relative z-51 w-full max-w-7xl mx-auto flex flex-col items-center">
