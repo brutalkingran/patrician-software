@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import { motion, AnimatePresence } from "motion/react"
 
 const variants = {
@@ -15,6 +15,8 @@ const variants = {
 
 const CarruselComponent = ({ images = [] }) => {
   const [[index, direccion], setIndexDireccion] = useState([0, 1])
+
+  const videoTimesRef = useRef({})
 
   const siguiente = useCallback(() => {
     if (!images.length) return
@@ -34,7 +36,7 @@ const CarruselComponent = ({ images = [] }) => {
     if (images.length <= 1) return
     const intervalo = setInterval(() => {
       siguiente()
-    }, 4500)
+    }, 8500)
     return () => clearInterval(intervalo)
   }, [index, images.length, siguiente])
 
@@ -78,7 +80,6 @@ const CarruselComponent = ({ images = [] }) => {
           }}
           className="absolute inset-0 w-full h-full bg-ps-mblue select-none cursor-grab active:cursor-grabbing"
         >
-          {/* SLIDE PRINCIPAL: Detecta si es Video o Imagen */}
           {isVideo ? (
             <video
               src={currentItem}
@@ -87,6 +88,16 @@ const CarruselComponent = ({ images = [] }) => {
               loop
               playsInline
               className="w-full h-full object-cover pointer-events-none"
+              // Restaurar el segundo donde se quedó
+              onLoadedMetadata={(e) => {
+                if (videoTimesRef.current[currentItem]) {
+                  e.target.currentTime = videoTimesRef.current[currentItem]
+                }
+              }}
+              // Ir guardando el tiempo actual mientras reproduce
+              onTimeUpdate={(e) => {
+                videoTimesRef.current[currentItem] = e.target.currentTime
+              }}
             />
           ) : (
             <img
@@ -105,15 +116,13 @@ const CarruselComponent = ({ images = [] }) => {
         </motion.div>
       </AnimatePresence>
 
-      {/* PUNTOS INDICATIVOS (DOTS) */}
+      {/* PUNTOS INDICATIVOS */}
       {images.length > 1 && (
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 pointer-events-none">
           {images.map((_, i) => (
             <span
               key={i}
-              className={`h-1.5 rounded-full transition-all duration-300 ${i === index
-                  ? "w-4 bg-ps-gold"
-                  : "w-1.5 bg-ps-white/40"
+              className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-4 bg-ps-gold" : "w-1.5 bg-ps-white/40"
                 }`}
             />
           ))}
