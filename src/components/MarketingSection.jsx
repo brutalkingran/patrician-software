@@ -29,6 +29,14 @@ const BENEFICIOS_MARKETING = [
     No dependés de la "suerte" de un Reel. Invertís en pauta y obtenés visibilidad garantizada.
   </>,
   <>
+    <strong className="font-bold text-ps-blue">Oportunidad única en Catamarca:</strong>{" "}
+    Es un mercado casi inexplorado en pauta digital. Al haber poca competencia,{" "}
+    <strong className="text-ps-green font-extrabold underline decoration-ps-green decoration-2">
+      el costo por personas alcanzadas es muchísimo más bajo
+    </strong>{" "}
+    que en otras provincias. Es el momento perfecto para dominar tu rubro antes de que la competencia despierte.
+  </>,
+  <>
     <strong className="font-bold text-ps-blue">Presupuesto controlado:</strong>{" "}
     Sabés exactamente cuánto cuesta impactar a cada bloque de 1.000 personas ($109 promedio) y qué retorno genera.
   </>,
