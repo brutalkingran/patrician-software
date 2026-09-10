@@ -4,7 +4,8 @@ const PlanCard = ({
   title,
   subtitle,
   realPrice,
-  price,
+  initialPayment, // Ej: "$ 324,743.00" (50% inicial gigante)
+  finalPayment,   // Ej: "$ 324,743.00" (Saldo al entregar)
   mensualidad,
   features = [],
   cta,
@@ -19,10 +20,8 @@ const PlanCard = ({
         }
       `}
     >
-      {/* CAPA DE TEXTURA DE MÁRMOL SOLICITADA */}
-      <div
-        className="absolute inset-0 bg-[url('/wall-texture.jpg')] bg-cover opacity-80 mix-blend-overlay pointer-events-none"
-      />
+      {/* CAPA DE TEXTURA DE MÁRMOL */}
+      <div className="absolute inset-0 bg-[url('/wall-texture.jpg')] bg-cover opacity-80 mix-blend-overlay pointer-events-none" />
 
       {/* MARCO DE DOBLE BORDURA INTERNA */}
       <div className="absolute inset-1.5 border border-ps-white/10 pointer-events-none" />
@@ -31,21 +30,11 @@ const PlanCard = ({
       {highlighted && (
         <div className="absolute top-4 right-4 z-20">
           <span className="
-    relative overflow-hidden inline-flex items-center justify-center
-    bg-yellow-400 text-ps-blue font-serif text-[10px] uppercase font-bold tracking-[0.2em]
-    px-2.5 py-0.5
-    /* Bordes estilo bisel de lingote */
-    border-t border-l border-yellow-100 
-    border-b-2 border-r-2
-    shadow-sm
-  ">
-            {/* Brillo blanco oblicuo que atraviesa el lingote */}
-            <span className="
-      absolute inset-0 
-      bg-[linear-gradient(110deg,transparent_30%,rgba(255,255,255,0.9)_50%,transparent_70%)] 
-      -translate-x-full animate-[shimmer_2s_infinite]
-    " />
-
+            relative overflow-hidden inline-flex items-center justify-center
+            bg-yellow-400 text-ps-blue font-serif text-[10px] uppercase font-bold tracking-[0.2em]
+            px-2.5 py-0.5 border-t border-l border-yellow-100 border-b-2 border-r-2 shadow-sm
+          ">
+            <span className="absolute inset-0 bg-[linear-gradient(110deg,transparent_30%,rgba(255,255,255,0.9)_50%,transparent_70%)] -translate-x-full animate-[shimmer_2s_infinite]" />
             <span className="relative z-10">Recomendado</span>
           </span>
         </div>
@@ -60,21 +49,33 @@ const PlanCard = ({
           {subtitle}
         </p>
 
-        {/* CAJA DE PRECIOS */}
+        {/* CAJA DE PRECIOS CON ESTRATEGIA 50/50 */}
         <div className="flex flex-col gap-1 border-t border-b border-ps-white/15 py-4 my-2 bg-ps-white/5 px-4 backdrop-blur-xs">
           {realPrice && (
-            <span className="font-serif text-sm text-ps-cream/50 line-through italic decoration-ps-lblue/40 decoration-2">
-              {realPrice}
-            </span>
+            <div className="flex items-center justify-between text-xs">
+              <span className="font-mono text-ps-cream/50 line-through italic decoration-ps-lblue/40 decoration-2">
+                Total: {realPrice}
+              </span>
+              <span className="font-mono text-[10px] text-ps-gold uppercase tracking-wider">
+                50% de descuento al inicio
+              </span>
+            </div>
           )}
-          <div className="flex items-baseline gap-2">
-            <span className="font-serif text-3xl sm:text-3xl font-light tracking-tight text-ps-cream">
-              {price}
+
+          <div className="flex items-baseline gap-2 mt-1">
+            <span className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-ps-cream">
+              {initialPayment}
             </span>
-            <span className="font-serif text-xs italic text-ps-cream/70">
-              / primer pago
+            <span className="font-serif text-xs italic text-ps-cream/80 uppercase font-semibold tracking-wider">
+              / 1° pago
             </span>
           </div>
+
+          {finalPayment && (
+            <p className="font-serif italic text-[11px] text-ps-cream/70 mt-1">
+              + <span className="text-ps-cream font-semibold">{finalPayment}</span> al finalizar
+            </p>
+          )}
         </div>
       </div>
 
@@ -107,9 +108,11 @@ const PlanCard = ({
           {cta}
         </a>
 
-        <p className="font-serif italic text-[11px] text-center text-ps-cream/60 tracking-wide mt-1">
-          Requiere un mantenimiento de <strong className="font-semibold text-ps-cream/80">{mensualidad}</strong> al mes
-        </p>
+        {mensualidad && (
+          <p className="font-serif italic text-[11px] text-center text-ps-cream/60 tracking-wide mt-1">
+            Mantenimiento técnico: <strong className="font-semibold text-ps-cream/80">{mensualidad}</strong>/mes
+          </p>
+        )}
       </div>
     </div>
   );

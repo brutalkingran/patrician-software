@@ -54,10 +54,11 @@ const PlanPage = () => {
               </span>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-4 text-ps-white">
-                Planes diseñados para impulsar tu{" "}
+                Planes diseñados para impulsar la{" "}
                 <span className="italic font-normal text-ps-white underline decoration-ps-lblue decoration-2 underline-offset-8">
-                  presencia
+                  presencia digital
                 </span>
+                {" "}de tu empresa
               </h1>
 
               <p className="text-base md:text-lg font-serif italic text-ps-white max-w-2xl mx-auto leading-relaxed">
@@ -65,76 +66,107 @@ const PlanPage = () => {
               </p>
             </div>
 
-            {/* Grilla de Planes */}
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch"
-            >
-              {/* BÁSICO */}
-              <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:w-full! [&>div]:max-w-none">
-                <PlanCard
-                  title="Primeros pasos"
-                  realPrice="$ 589,807.50"
-                  price="$ 453,698.08"
-                  mensualidad="$ 45,369.81"
-                  subtitle="Un viaje de mil millas comienza con un primer paso"
-                  features={[
-                    "Página web profesional",
-                    "Diseño limpio y responsivo para todo dispositivo",
-                    "Una campaña de marketing al mes",
-                    "Captura simple de leads",
-                    "Tu negocio aparecerá en Google, Facebook e Instagram",
-                    "Ideal para validar una idea o negocio nuevo",
-                  ]}
-                  cta="Empezar"
-                />
-              </motion.div>
+              {/* Grilla de Planes */}
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch"
+              >
+                {/* PRIMEROS PASOS */}
+                <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:w-full! [&>div]:max-w-none">
+                  <PlanCard
+                    title="Primeros pasos"
+                    realPrice="$ 489,807"
+                    initialPayment="$ 176,849"
+                    finalPayment="$ 176,849"
+                    mensualidad={null}
+                    subtitle="Un viaje de mil millas comienza con un primer paso"
+                    features={[
+                      <span key="1">
+                        <strong className="font-bold text-ps-gold">Tu primera campaña publicitaria activa</strong>
+                      </span>,
+                      <span key="2">
+                        Anuncios estratégicos en <strong className="text-ps-cream underline decoration-ps-lblue/60 underline-offset-4 decoration-2">Google, Meta o TikTok</strong>
+                      </span>,
+                      <span key="3">
+                        <strong className="text-ps-cream">Landing Page</strong> optimizada para conversión
+                      </span>,
+                      <span key="4">
+                        Captura y gestión directa de <span className="font-bold uppercase">Leads</span>
+                      </span>,
+                      <span key="5">
+                        Ideal para <strong className="text-ps-cream">validar ofertas o lanzamientos</strong>
+                      </span>,
+                    ]}
+                    cta="Empezar ahora"
+                  />
+                </motion.div>
 
-              {/* EMPRENDEDOR - DESTACADO */}
-              <motion.div variants={itemVariants} className="flex w-full h-full md:-translate-y-3 [&>div]:w-full! [&>div]:max-w-none">
-                <PlanCard
-                  title="Emprendedor"
-                  realPrice="$ 844,331.90"
-                  price="$ 649,486.08"
-                  mensualidad="$ 64,948.61"
-                  subtitle="Más ventas, más control, mejores decisiones"
-                  highlighted
-                  features={[
-                    "Reunión previa al proyecto",
-                    "Diseño enfocado a conversión",
-                    "Campañas multi-canal (Meta + Google)",
-                    "Suscripción a Newsletter",
-                    "Anuncios animados",
-                    "Diseño a medida",
-                    "Automatización básica de leads",
-                  ]}
-                  cta="Quiero este plan"
-                />
-              </motion.div>
+                {/* EMPRENDEDOR - DESTACADO */}
+                <motion.div variants={itemVariants} className="flex w-full h-full md:-translate-y-3 [&>div]:w-full! [&>div]:max-w-none">
+                  <PlanCard
+                    title="Emprendedor"
+                    realPrice="$ 744,331"
+                    initialPayment="$ 324,743"
+                    finalPayment="$ 324,743"
+                    mensualidad="$ 32,200"
+                    subtitle="Más ventas, más control, mejores decisiones"
+                    highlighted
+                    features={[
+                      <span key="1">
+                        <strong className="font-bold text-ps-gold text-sm">Sitio Web Profesional</strong> de alto impacto y a medida
+                      </span>,
+                      <span key="2">
+                        Diseño <strong className="text-ps-cream underline decoration-ps-gold/80 underline-offset-4 decoration-2">100% a medida</strong> de tu marca
+                      </span>,
+                      <span key="3">
+                        Estructura pensada para <strong className="text-ps-gold">cerrar ventas</strong>
+                      </span>,
+                      <span key="4">
+                        Servicio de mail y newsletter a cortesía nuestra
+                      </span>,
+                      <span key="5">
+                        Nos encargamos de adquisición de Dominio, Servidor y configuración de <span className="font-bold uppercase">SSL</span>
+                      </span>,
+                      <span key="6">
+                        Diseñado para negocios listos para <strong className="text-ps-cream">escalar</strong>
+                      </span>,
+                    ]}
+                    cta="Quiero este plan"
+                  />
+                </motion.div>
 
-              {/* ÉLITE */}
-              <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:w-full! [&>div]:max-w-none">
-                <PlanCard
-                  title="Élite"
-                  realPrice="$ 1,317,531.90"
-                  price="$ 1,013,486.08"
-                  mensualidad="$ 101,348.61"
-                  subtitle="Para negocios que ya juegan en serio"
-                  features={[
-                    "Todo lo anterior",
-                    "Reuniones más frecuentes",
-                    "Funnel completo de ventas",
-                    "Marketing agresivo y escalable",
-                    "Automatizaciones avanzadas (emails, WhatsApp)",
-                    "Soporte prioritario",
-                    "Dirección estratégica personalizada",
-                  ]}
-                  cta="Hablar con un asesor"
-                />
+                {/* ÉLITE */}
+                <motion.div variants={itemVariants} className="flex w-full h-full [&>div]:w-full! [&>div]:max-w-none">
+                  <PlanCard
+                    title="Élite"
+                    realPrice="$ 1,617,531"
+                    initialPayment="$ 656,743"
+                    finalPayment="$ 656,743"
+                    mensualidad="$ 80,348"
+                    subtitle="Para negocios que juegan en serio"
+                    features={[
+                      <span key="1">
+                        <strong className="font-bold text-ps-gold tracking-wider">Todo lo mencionado anteriormente</strong>
+                      </span>,
+                      <span key="2">
+                        Estrategia de <strong className="text-ps-cream underline decoration-ps-lblue/80 underline-offset-4 decoration-2">Paid Media Agresivo</strong>
+                      </span>,
+                      <span key="3">
+                        Consultoría y asesoría estratégica <span className="font-bold">profesional</span> mensual
+                      </span>,
+                      <span key="4">
+                        Soporte prioritario <strong className="text-ps-gold">24/7</strong>
+                      </span>,
+                      <span key="5">
+                        Optimización constante de tu <strong className="text-ps-cream">funnel de ventas</strong>
+                      </span>,
+                    ]}
+                    cta="Hablar con un asesor"
+                  />
+                </motion.div>
               </motion.div>
-            </motion.div>
 
             {/* Banner de Auditoría en estilo Placa/Inscripción */}
             <motion.div
