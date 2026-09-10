@@ -17,9 +17,9 @@ const MainPage = () => {
       <MainComponent />
       <ChosenUsComponent/>
 
-      <EliteSection index={0} />
-      <WebsiteSection index={1} />
-      <MarketingSection index={0} />
+      <EliteSection/>
+      <WebsiteSection/>
+      <MarketingSection/>
       <ProjectsSection/>
 
       <PlanPage />

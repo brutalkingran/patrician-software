@@ -19,7 +19,7 @@ const THEMES = {
     description: "text-ps-white/90",
     tag: "bg-ps-cream text-ps-blue border-ps-cream",
     defaultMuralEnter: "var(--color-ps-blue)",
-    defaultMuralLeave: "var(--color-ps-cream)",
+    defaultMuralLeave: "var(--color-ps-black)",
   },
   // 👑 TEMA 1: Dorado Imperial (Ideal para secciones destacadas/premium)
   gold: {
@@ -29,7 +29,7 @@ const THEMES = {
     description: "text-ps-blue/90",
     tag: "bg-ps-blue text-ps-gold border-ps-blue",
     defaultMuralEnter: "var(--color-ps-gold)",
-    defaultMuralLeave: "var(--color-ps-cream)",
+    defaultMuralLeave: "var(--color-ps-black)",
   },
   // 📈 TEMA 2: Verde Métricas (Ideal para retornos, resultados y crecimiento)
   green: {
@@ -39,7 +39,7 @@ const THEMES = {
     description: "text-ps-blue/90",
     tag: "bg-ps-blue text-ps-green border-ps-blue",
     defaultMuralEnter: "var(--color-ps-green)",
-    defaultMuralLeave: "var(--color-ps-cream)",
+    defaultMuralLeave: "var(--color-ps-black)",
   },
   // 🚀 NUEVO TEMA: Celeste Imperial (lblue)
   lblue: {
@@ -49,7 +49,7 @@ const THEMES = {
     description: "text-ps-blue/90",
     tag: "bg-ps-blue text-ps-white border-ps-blue",
     defaultMuralEnter: "var(--color-ps-lblue)",
-    defaultMuralLeave: "var(--color-ps-cream)",
+    defaultMuralLeave: "var(--color-ps-black)",
   },
   // 🚀 NUEVO TEMA: Azul Hielo (ice)
   ice: {
