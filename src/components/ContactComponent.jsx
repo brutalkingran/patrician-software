@@ -69,7 +69,7 @@ const ContactComponent = () => {
           <button
             type="submit"
             form="contact-form"
-            className="relative group w-full py-5 px-4 bg-[url(wall-texture.jpg)] md:bg-none md:bg-ps-blue/80 md:hover:bg-[url(wall-texture.jpg)] border-4 border-ps-white text-ps-blue md:text-ps-white hover:text-ps-blue rounded-none shadow-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.05] flex flex-col items-center justify-center gap-1"
+            className="relative group w-full py-5 px-4 bg-[url(/wall-texture.jpg)] md:bg-none md:bg-ps-blue/80 md:hover:bg-[url(/wall-texture.jpg)] border-4 border-ps-white text-ps-blue md:text-ps-white hover:text-ps-blue rounded-none shadow-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.05] flex flex-col items-center justify-center gap-1"
           >
             <span className="absolute inset-0 bg-linear-to-r from-transparent via-ps-white/90 to-transparent -translate-x-full group-hover:animate-[shimmer_2.5s_infinite] pointer-events-none z-0" />
 
