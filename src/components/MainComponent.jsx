@@ -8,8 +8,8 @@ const MainComponent = () => {
     <main className="relative flex flex-col text-center justify-center items-center min-h-screen w-full overflow-hidden">
       {/* MURAL ANIMADO LATERAL */}
       <div className="hidden xl:block">
-        <MuralAnimado direction="left-20" />
-        <MuralAnimado direction="right-20" />
+        <MuralAnimado direction="left-10 2xl:left-20" />
+        <MuralAnimado direction="right-10 2xl:right-20" />
       </div>
 
       {/* INICIO - HERO FRAME */}
