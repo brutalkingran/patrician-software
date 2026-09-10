@@ -9,6 +9,7 @@ import FooterNico from "../components/FooterNico";
 import EliteSection from "../components/EliteSection";
 import PlanPage from "./PlanPage";
 import WebsiteSection from "../components/WebsiteSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 const MainPage = () => {
   return (
@@ -19,6 +20,7 @@ const MainPage = () => {
       <EliteSection index={0} />
       <WebsiteSection index={1} />
       <MarketingSection index={0} />
+      <ProjectsSection/>
 
       <PlanPage />
       <PricesComponent />
