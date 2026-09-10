@@ -175,20 +175,37 @@ const PlanPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="w-full max-w-2xl mx-auto mt-14"
             >
-              <div className="relative overflow-hidden bg-ps-white/60 border border-ps-blue/20 p-6 text-center shadow-xs backdrop-blur-xs before:content-[''] before:absolute before:inset-1 before:border before:border-ps-blue/10 before:pointer-events-none">
-                <p className="font-serif text-base md:text-lg text-ps-blue leading-relaxed">
-                  ¿No sabés cuál elegir? Evaluemos tu caso con una{" "}
-                  <a
-                    href="https://wa.me/5493517961371?text=Hola!%20Me%20interesa%20agendar%20una%20auditoría%20gratuita"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-ps-mblue underline decoration-ps-lblue decoration-2 underline-offset-4 hover:text-ps-blue transition-colors"
-                  >
-                    auditoría gratuita
-                  </a>
-                  .
-                </p>
-              </div>
+                <div className="relative overflow-hidden bg-ps-white/60 border border-ps-blue/20 p-6 text-center shadow-xs backdrop-blur-xs before:content-[''] before:absolute before:inset-1 before:border before:border-ps-blue/10 before:pointer-events-none max-w-3xl mx-auto mt-10">
+                  {/* AUDITORÍA GRATUITA */}
+                  <p className="font-serif text-base md:text-lg text-ps-blue leading-relaxed">
+                    ¿No sabés cuál elegir? Evaluemos tu caso con una{" "}
+                    <a
+                      href="https://wa.me/5493517961371?text=Hola!%20Me%20interesa%20agendar%20una%20auditoría%20gratuita"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-ps-mblue underline decoration-ps-lblue decoration-2 underline-offset-4 hover:text-ps-blue transition-colors"
+                    >
+                      auditoría gratuita
+                    </a>
+                    .
+                  </p>
+
+                  {/* DETALLE E-COMMERCE (SUTIL / PREVIEW CHICO) */}
+                  <div className="flex items-center justify-center gap-3 text-xs md:text-sm text-ps-blue/80 font-serif italic pt-3">
+                    <span>
+                      Si lo que buscás es un e-commerce, te invitamos a probar sus funcionalidades{" "}
+                      <a
+                        href="https://sandbox.patrician-software.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="not-italic font-bold font-mono text-ps-mblue underline decoration-ps-lblue underline-offset-2 hover:text-ps-gold transition-colors"
+                      >
+                        aquí
+                      </a>
+                      .
+                    </span>
+                  </div>
+                </div>
             </motion.div>
 
           </div>
