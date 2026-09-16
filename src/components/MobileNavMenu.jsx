@@ -84,13 +84,16 @@ const MobileNavMenu = () => {
           </div>
 
           <nav className="flex-1 flex flex-col items-center justify-center gap-1 px-6 overflow-y-auto">
-            {NAV_ITEMS.map(({ href, label, icon: Icon }) => (
+            {NAV_ITEMS.map(({ href, label, icon: Icon }, index) => (
               <a
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
                 className="w-full max-w-xs flex items-center gap-3 font-serif uppercase tracking-[0.2em] text-base py-3.5 text-ps-white border-b border-ps-white/15 hover:text-ps-lblue transition-colors"
               >
+                <span className="shrink-0 w-6 font-bold text-ms text-ps-gold tracking-normal">
+                  {String(index + 1)+")"}
+                </span>
                 <Icon className="w-4 h-4 shrink-0" />
                 <span>{label}</span>
               </a>
