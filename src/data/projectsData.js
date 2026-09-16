@@ -44,7 +44,7 @@ export const PROJECTS_DATA = [
     ],
   },
   {
-    id: "fandi",
+    id: "fandy",
     title: "Campaña Fandy",
     category: "marketing",
     image: "/img/fandy.jpg",
@@ -63,6 +63,17 @@ export const PROJECTS_DATA = [
     virtues: [
       { value: "+40%", label: "Conversión Ventas" },
       { value: "120k", label: "Impresiones Meta" },
+    ],
+  },
+  {
+    id: "indusplast",
+    title: "Campaña Indusplast",
+    category: "marketing",
+    image: "/img/indus.jpeg",
+    url: null,
+    virtues: [
+      { value: "Campaña", label: "Activa" },
+      { value: "Piletas", label: "y Accesorios" },
     ],
   },
   {
