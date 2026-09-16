@@ -1,23 +1,21 @@
-import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
-const ContactForm = () => {
-  const [captchaToken, setCaptchaToken] = useState("");
-  const captchaRef = useRef(null);
+const WHATSAPP_NUMBER = "5493834091942";
 
+const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log({ ...data, captchaToken });
-  };
+    const text = `Hola, mi nombre es ${data.Name}\nTeléfono: ${data.MobileNumber}\nEmail: ${data.email}\nMensaje: ${data.Message}`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
-  const onHCaptchaChange = (token) => {
-    setCaptchaToken(token);
+    window.open(whatsappUrl, "_blank");
+    reset();
   };
 
   return (
@@ -90,18 +88,6 @@ const ContactForm = () => {
             Mensaje requerido
           </span>
         )}
-      </div>
-
-      {/* HCAPTCHA */}
-      <div className="flex justify-center w-full mt-2 overflow-hidden scale-[0.85] relative z-10">
-        <HCaptcha
-          sitekey="TU_SITE_KEY_REAL_AQUI"
-          ref={captchaRef}
-          reCaptchaCompat={false}
-          onVerify={onHCaptchaChange}
-          languageOverride="es"
-          onExpire={() => setCaptchaToken("")}
-        />
       </div>
     </form>
   );
