@@ -52,6 +52,7 @@ const WebsiteSection = ({ variant = "blue", mediaPosition = "right" }) => {
       tag="Presencia Online:"
       description="Tome el control absoluto de su marca sin atarse a plataformas de terceros ni diseños genéricos"
       messages={BENIFICIOS_WEBSITE}
+      toggleLabel="¿Querés ver los beneficios?"
     >
       <div className="flex flex-col">
         <LaptopMockup>

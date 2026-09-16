@@ -59,6 +59,7 @@ const MarketingSection = ({ variant = "cream", mediaPosition = "left" }) => {
       tag="Anuncios Pago"
       description="para que lo entiendas de forma simple y sin rodeos:"
       messages={BENEFICIOS_MARKETING}
+      toggleLabel="¿Querés ver por qué invertir en Paid Media?"
     >
       <div className="flex flex-col">
         <TabletMockup>

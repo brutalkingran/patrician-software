@@ -54,6 +54,7 @@ const EliteSection = ({ variant = "cream", mediaPosition = "right" }) => {
       tag="Patrician Software"
       description="aspira a aprovechar todas y cada una de las herramientas que la web nos deja a disposición:"
       messages={MENSAJES_EXPERTS}
+      toggleLabel="¿Querés saber qué te podemos brindar?"
     >
       <PhoneMockup>
         <CarruselComponent images={MEDIA_ELITE} />

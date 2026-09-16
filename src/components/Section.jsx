@@ -69,6 +69,7 @@ const Section = ({
   tag,
   description,
   messages,
+  toggleLabel,
   children,
   variant = "cream", // "cream" | "blue"
   mediaPosition = "left", // "left" | "right"
@@ -155,7 +156,7 @@ const Section = ({
 
           {/* Ticker / Lista de Mensajes */}
           {messages && messages.length > 0 && (
-            <TextTicker messages={messages} />
+            <TextTicker messages={messages} toggleLabel={toggleLabel} />
           )}
 
           {/* Slot para contenido extra */}
