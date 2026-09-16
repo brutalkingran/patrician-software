@@ -6,7 +6,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-ps-mblue text-ps-white font-serif border-t border-ps-cream/25">
+    <footer id="footer" className="relative overflow-hidden bg-ps-mblue text-ps-white font-serif border-t border-ps-cream/25 scroll-mt-4">
 
       {/* Contenedor principal con padding para dejar espacio a los bordes laterales */}
       <div className="relative max-w-6xl mx-auto px-12 md:px-20 md:py-14 py-18">
@@ -118,7 +118,7 @@ const Footer = () => {
 
           <div className="flex items-center">
             <img
-              src="logo_t.png"
+              src="/logo_t.png"
               className="h-6 sm:h-7 w-auto object-contain transition-opacity duration-300"
               alt="Patrician Software Logo"
             />

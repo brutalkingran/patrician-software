@@ -38,6 +38,7 @@ const BENIFICIOS_WEBSITE = [
 const WebsiteSection = ({ variant = "blue", mediaPosition = "right" }) => {
   return (
     <Section
+      id="sitio-web"
       variant={variant}
       mediaPosition={mediaPosition}
       title={

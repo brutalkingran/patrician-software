@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import LoadingComponent from "../components/LoadingComponent";
 import PlanCard from "../components/ui/PlanCard";
 import { AnimatePresence, motion } from "framer-motion";
@@ -21,29 +22,44 @@ const itemVariants = {
   },
 };
 
-const PlanPage = () => {
-  const [loading, setLoading] = useState(true);
+const PlanPage = ({ embedded = false }) => {
+  const [loading, setLoading] = useState(!embedded);
   const { setMuralColor } = useMural();
 
   useEffect(() => {
+    if (embedded) return;
     setMuralColor("var(--color-ps-cream)");
     const t = setTimeout(() => setLoading(false), 1200);
     return () => clearTimeout(t);
-  }, [setMuralColor]);
+  }, [setMuralColor, embedded]);
+
+  const WrapperTag = embedded ? motion.section : motion.main;
+  const HeadingTag = embedded ? motion.h2 : motion.h1;
 
   return (
     <AnimatePresence mode="wait">
       {loading ? (
         <LoadingComponent key="loader" />
       ) : (
-        <motion.main
+        <WrapperTag
+          id="planes"
           key="plans"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative min-h-screen bg-ps-blue text-ps-ice px-4 sm:px-6 pt-24 sm:pt-5 pb-20 flex flex-col items-center overflow-hidden"
+          className="relative min-h-screen bg-ps-blue text-ps-ice px-4 sm:px-6 pt-24 sm:pt-5 pb-20 flex flex-col items-center overflow-hidden scroll-mt-4"
         >
+          {!embedded && (
+            <Helmet>
+              <title>Planes y Precios - Patrician Software</title>
+              <meta
+                name="description"
+                content="Elegí el plan de desarrollo web y marketing digital que mejor acompañe a tu negocio: campañas publicitarias, sitios a medida y Paid Media con precios claros."
+              />
+              <link rel="canonical" href="https://patrician-software.com/planes" />
+            </Helmet>
+          )}
 
           <div className="relative z-51 w-full max-w-7xl mx-auto flex flex-col items-center">
 
@@ -53,13 +69,13 @@ const PlanPage = () => {
                 - Inversión Estratégica -
               </span>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-4 text-ps-white">
+              <HeadingTag className="text-3xl sm:text-4xl md:text-5xl font-serif font-light tracking-wide leading-tight mb-4 text-ps-white">
                 Planes diseñados para impulsar la{" "}
                 <span className="italic font-normal text-ps-white underline decoration-ps-lblue decoration-2 underline-offset-8">
                   presencia digital
                 </span>
                 {" "}de tu empresa
-              </h1>
+              </HeadingTag>
 
               <p className="text-base md:text-lg font-serif italic text-ps-white max-w-2xl mx-auto leading-relaxed">
                 Elegí la combinación de desarrollo web y marketing digital que mejor acompañe la etapa actual de tu negocio.
@@ -209,7 +225,7 @@ const PlanPage = () => {
             </motion.div>
 
           </div>
-        </motion.main>
+        </WrapperTag>
       )}
     </AnimatePresence>
   );

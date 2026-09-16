@@ -64,6 +64,7 @@ const THEMES = {
 };
 
 const Section = ({
+  id,
   title,
   subtitle,
   tag,
@@ -86,7 +87,8 @@ const Section = ({
 
   return (
     <motion.section
-      className={`relative z-10 w-full ${theme.bg} ${theme.text} py-16 md:py-24 px-4 md:px-8 overflow-hidden`}
+      id={id}
+      className={`relative z-10 w-full ${theme.bg} ${theme.text} py-16 md:py-24 px-4 md:px-8 overflow-hidden scroll-mt-4`}
       onViewportEnter={() => setMuralColor(muralEnter)}
       onViewportLeave={() => setMuralColor(muralLeave)}
       viewport={{ amount: 0.2 }}

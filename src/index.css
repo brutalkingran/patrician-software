@@ -47,6 +47,8 @@
 
   html {
     font-family: sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
   }
 
   #borderimg3 {

@@ -13,7 +13,7 @@ const ChosenUsComponent = () => {
   const duplicatedLogos = [...logosCarrusel, ...logosCarrusel, ...logosCarrusel]
 
   return (
-    <section className="mt-10 pb-16 relative w-full flex flex-col mx-auto justify-center md:w-3/4 z-10">
+    <section id="clientes" className="mt-10 pb-16 relative w-full flex flex-col mx-auto justify-center md:w-3/4 z-10 scroll-mt-4">
       <div className="relative z-10">
 
         {/* TÍTULO Y SUBTÍTULO IMPERIAL */}

@@ -36,7 +36,7 @@ const ProjectsSection = ({ variant = "blue" }) => {
   };
 
   return (
-    <section className="w-full py-12 px-4 md:px-8 max-w-5xl mx-auto">
+    <section id="proyectos" className="w-full py-12 px-4 md:px-8 max-w-5xl mx-auto scroll-mt-4">
       {/* Cabecera y Filtros */}
       <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
         <div>

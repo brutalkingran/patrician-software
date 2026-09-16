@@ -15,15 +15,16 @@ const ContactComponent = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ repeat: true, amount: 0.15 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="relative w-screen left-1/2 -translate-x-1/2 mt-10 pb-16 bg-transparent"
+      id="contacto"
+      className="relative w-screen left-1/2 -translate-x-1/2 mt-10 pb-16 bg-transparent scroll-mt-4"
     >
       <div className="relative z-20 max-w-4xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* COLUMNA IZQUIERDA - FORMULARIO */}
           <div className="w-full flex flex-col items-center lg:items-start justify-start h-full">
-            <h1 className="font-serif text-xs md:text-sm uppercase tracking-[0.25em] text-ps-white font-medium">
+            <h2 className="font-serif text-xs md:text-sm uppercase tracking-[0.25em] text-ps-white font-medium">
               Contactate con nosotros
-            </h1>
+            </h2>
 
             <ContactForm />
           </div>

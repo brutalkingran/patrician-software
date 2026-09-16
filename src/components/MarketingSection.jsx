@@ -45,6 +45,7 @@ const BENEFICIOS_MARKETING = [
 const MarketingSection = ({ variant = "cream", mediaPosition = "left" }) => {
   return (
     <Section
+      id="marketing"
       variant={variant}
       mediaPosition={mediaPosition}
       title={

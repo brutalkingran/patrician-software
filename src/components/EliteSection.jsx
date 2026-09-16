@@ -40,6 +40,7 @@ const MENSAJES_EXPERTS = [
 const EliteSection = ({ variant = "cream", mediaPosition = "right" }) => {
   return (
     <Section
+      id="excelencia"
       variant={variant}
       mediaPosition="left"
       title={

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Helmet } from "react-helmet-async"
 import QuestionComponent from "../components/ui/QuestionComponent"
 import { FaLongArrowAltRight } from "react-icons/fa"
 import { useNavigate } from "react-router"
@@ -43,6 +44,11 @@ const ClientFormPage = () => {
   
   return (
     <main className="bg-ps-blue min-h-screen overflow-hidden flex flex-col justify-center bg-[url(/logo_tr.svg)] bg-center bg-no-repeat bg-contain">
+      <Helmet>
+        <title>Test de Diagnóstico - Patrician Software</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+
       <h1 className="text-3xl md:text-5xl text-center p-4">Completá el Test</h1>
 
       <p className="text-center text-1xl opacity-80 mb-8 md:text-2xl">

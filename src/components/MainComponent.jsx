@@ -5,7 +5,7 @@ import LogoAnimado from "./ui/LogoAnimado";
 
 const MainComponent = () => {
   return (
-    <main className="relative flex flex-col text-center justify-center items-center min-h-screen w-full overflow-hidden">
+    <section id="inicio" className="relative flex flex-col text-center justify-center items-center min-h-screen w-full overflow-hidden scroll-mt-4">
       {/* MURAL ANIMADO LATERAL */}
       <div className="hidden xl:block">
         <MuralAnimado direction="left-10 2xl:left-20" />
@@ -76,7 +76,7 @@ const MainComponent = () => {
         </div>
 
       </div>
-    </main>
+    </section>
   );
 };
 
