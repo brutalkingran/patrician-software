@@ -86,7 +86,7 @@ const Footer = () => {
                 <div className="mt-1 text-ps-lblue">
                   <FaMapMarkerAlt size={15} />
                 </div>
-                <span>Catamarca, Argentina</span>
+                <span>San Fernando del Valle de Catamarca, Catamarca, Argentina</span>
               </div>
 
               <div className="flex items-start gap-3.5">
