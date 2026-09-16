@@ -14,20 +14,6 @@ const PricesComponent = () => {
       >
         ¿Qué estás esperando?
       </motion.h2>
-      
-      {/* BOTÓN OVALADO CON ANIMACIÓN DE ENTRADA LATERAL MÁS LENTA */}
-
-      {/* Inyección de la animación restante del destello de fondo */}
-      <style jsx global>{`
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%) skewX(-12deg);
-          }
-          100% {
-            transform: translateX(200%) skewX(-12deg);
-          }
-        }
-      `}</style>
     </section>
   );
 };

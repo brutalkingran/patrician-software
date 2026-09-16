@@ -10,6 +10,7 @@ import PlanPage from "./PlanPage";
 import WebsiteSection from "../components/WebsiteSection";
 import ProjectsSection from "../components/ProjectsSection";
 import MobileNavMenu from "../components/MobileNavMenu";
+import MeetingPopup from "../components/MeetingPopup";
 
 const MainPage = () => {
   return (
@@ -24,6 +25,7 @@ const MainPage = () => {
       </Helmet>
 
       <MobileNavMenu />
+      <MeetingPopup />
 
       <main>
         <MainComponent />
