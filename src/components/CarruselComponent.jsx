@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react"
 import { motion, AnimatePresence } from "motion/react"
+import { useLightbox } from "../context/LightboxContext"
 
 const variants = {
   enter: (direccion) => ({
@@ -13,10 +14,14 @@ const variants = {
   }),
 }
 
+const UMBRAL_TAP = 8
+
 const CarruselComponent = ({ images = [] }) => {
   const [[index, direccion], setIndexDireccion] = useState([0, 1])
+  const { openLightbox } = useLightbox()
 
   const videoTimesRef = useRef({})
+  const pointerStartRef = useRef({ x: 0, y: 0 })
 
   const siguiente = useCallback(() => {
     if (!images.length) return
@@ -60,6 +65,21 @@ const CarruselComponent = ({ images = [] }) => {
   const currentItem = images[index]
   const isVideo = typeof currentItem === "string" && currentItem.endsWith(".mp4")
 
+  const handlePointerDown = (event) => {
+    pointerStartRef.current = { x: event.clientX, y: event.clientY }
+  }
+
+  const handlePointerUp = (event) => {
+    if (isVideo) return
+    const dx = event.clientX - pointerStartRef.current.x
+    const dy = event.clientY - pointerStartRef.current.y
+    // Solo abrimos el visor si el puntero casi no se movió: así un arrastre
+    // real (cambio de slide) nunca dispara el visor, sea con mouse o con dedo.
+    if (Math.hypot(dx, dy) < UMBRAL_TAP) {
+      openLightbox(currentItem, `Trabajo realizado ${index + 1}`)
+    }
+  }
+
   return (
     <div className="w-full h-full bg-ps-blue relative overflow-hidden touch-pan-y">
       <AnimatePresence mode="popLayout" custom={direccion}>
@@ -74,11 +94,13 @@ const CarruselComponent = ({ images = [] }) => {
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.6}
           onDragEnd={manejarDragEnd}
+          onPointerDown={handlePointerDown}
+          onPointerUp={handlePointerUp}
           transition={{
             duration: 0.4,
             ease: [0.32, 0.72, 0, 1],
           }}
-          className="absolute inset-0 w-full h-full bg-ps-mblue select-none cursor-grab active:cursor-grabbing"
+          className={`absolute inset-0 w-full h-full bg-ps-mblue select-none active:cursor-grabbing ${isVideo ? "cursor-grab" : "cursor-zoom-in"}`}
         >
           {isVideo ? (
             <video

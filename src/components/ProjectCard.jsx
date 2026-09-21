@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiMaximize2 } from "react-icons/fi";
+import { useLightbox } from "../context/LightboxContext";
 
 const ProjectCard = ({ project }) => {
   const { title, category, image, url, virtues } = project;
+  const { openLightbox } = useLightbox();
   const Component = url ? "a" : "div";
 
   const isSoftware = category === "software";
@@ -29,15 +31,16 @@ const ProjectCard = ({ project }) => {
         href={url || undefined}
         target={url ? "_blank" : undefined}
         rel={url ? "noopener noreferrer" : undefined}
-        className={`
-          group relative block w-full h-48 md:h-52 
-          rounded-2xl overflow-hidden 
-          border border-ps-white/10 
-          bg-ps-blue 
+        onClick={!url ? () => openLightbox(image, title) : undefined}
+        className="
+          group relative block w-full h-48 md:h-52
+          rounded-2xl overflow-hidden
+          border border-ps-white/10
+          bg-ps-blue
           shadow-lg hover:shadow-2xl hover:shadow-ps-blue/40
           transition-all duration-300
-          ${url ? "cursor-pointer" : "cursor-default"}
-        `}
+          cursor-pointer
+        "
       >
         {/* Imagen de fondo rotada con zoom en Hover */}
         <div className="absolute inset-0 overflow-hidden">
@@ -76,11 +79,9 @@ const ProjectCard = ({ project }) => {
               </h3>
             </div>
 
-            {url && (
-              <div className="p-1 bg-ps-white/10 text-ps-gold font-mono group-hover:text-ps-gold group-hover:bg-ps-white/20 transition-all text-xs">
-                Ver
-              </div>
-            )}
+            <div className="flex items-center gap-1 p-1 bg-ps-white/10 text-ps-gold font-mono group-hover:text-ps-gold group-hover:bg-ps-white/20 transition-all text-xs shrink-0">
+              {url ? <FiExternalLink size={12} /> : <FiMaximize2 size={12} />}
+            </div>
           </div>
 
           {/* Contenido Inferior: Virtues / Métricas */}
