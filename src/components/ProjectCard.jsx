@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
-import { FiExternalLink, FiMaximize2 } from "react-icons/fi";
-import { useLightbox } from "../context/LightboxContext";
+import { FiInfo } from "react-icons/fi";
 
-const ProjectCard = ({ project }) => {
-  const { title, category, image, url, virtues } = project;
-  const { openLightbox } = useLightbox();
-  const Component = url ? "a" : "div";
+const ProjectCard = ({ project, onOpenDetail }) => {
+  const { title, category, image, virtues } = project;
 
   const isSoftware = category === "software";
 
@@ -27,13 +24,11 @@ const ProjectCard = ({ project }) => {
       transition={{ duration: 0.3 }}
       className="w-full"
     >
-      <Component
-        href={url || undefined}
-        target={url ? "_blank" : undefined}
-        rel={url ? "noopener noreferrer" : undefined}
-        onClick={!url ? () => openLightbox(image, title) : undefined}
+      <button
+        type="button"
+        onClick={() => onOpenDetail(project)}
         className="
-          group relative block w-full h-48 md:h-52
+          group relative block w-full h-48 md:h-52 text-left
           rounded-2xl overflow-hidden
           border border-ps-white/10
           bg-ps-blue
@@ -48,10 +43,10 @@ const ProjectCard = ({ project }) => {
             src={image}
             alt={title}
             className="
-              w-[125%] h-[125%] -top-[12%] -left-[12%] 
-              object-cover 
-              -rotate-6 group-hover:rotate-0 group-hover:scale-105 
-              transition-transform duration-500 ease-out 
+              w-[125%] h-[125%] -top-[12%] -left-[12%]
+              object-cover
+              -rotate-6 group-hover:rotate-0 group-hover:scale-105
+              transition-transform duration-500 ease-out
               opacity-65 group-hover:opacity-85
             "
           />
@@ -80,7 +75,7 @@ const ProjectCard = ({ project }) => {
             </div>
 
             <div className="flex items-center gap-1 p-1 bg-ps-white/10 text-ps-gold font-mono group-hover:text-ps-gold group-hover:bg-ps-white/20 transition-all text-xs shrink-0">
-              {url ? <FiExternalLink size={12} /> : <FiMaximize2 size={12} />}
+              <FiInfo size={12} />
             </div>
           </div>
 
@@ -100,7 +95,7 @@ const ProjectCard = ({ project }) => {
             </div>
           )}
         </div>
-      </Component>
+      </button>
     </motion.div>
   );
 };

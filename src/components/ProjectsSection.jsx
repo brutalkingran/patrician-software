@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import ProjectDetailModal from "./ProjectDetailModal";
 import { PROJECTS_DATA } from "../data/projectsData";
 
 const TABS = [
@@ -11,6 +12,7 @@ const TABS = [
 
 const ProjectsSection = ({ variant = "blue" }) => {
   const [filter, setFilter] = useState("all");
+  const [selectedProject, setSelectedProject] = useState(null);
   const isDark = variant === "blue";
 
   const projectsFiltrados = PROJECTS_DATA.filter((p) => {
@@ -83,10 +85,19 @@ const ProjectsSection = ({ variant = "blue" }) => {
       <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
         <AnimatePresence mode="popLayout">
           {projectsFiltrados.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onOpenDetail={setSelectedProject}
+            />
           ))}
         </AnimatePresence>
       </motion.div>
+
+      <ProjectDetailModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 };
