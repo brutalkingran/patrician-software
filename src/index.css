@@ -51,7 +51,7 @@
     scroll-padding-top: 1rem;
   }
 
-  #borderimg3 {
+  .marco-imperial {
     border-image-source: url(/texture.svg);
     border-image-slice: 30;
   }

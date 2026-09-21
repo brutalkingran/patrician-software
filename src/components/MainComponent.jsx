@@ -13,9 +13,8 @@ const MainComponent = () => {
       </div>
 
       {/* INICIO - HERO FRAME */}
-      <div 
-        className="m-2 flex flex-col items-center justify-center gap-4 min-h-[95vh] w-full max-w-4xl px-6 py-12 md:gap-6 border-40 md:border-60" 
-        id="borderimg3"
+      <div
+        className="marco-imperial m-2 flex flex-col items-center justify-center gap-4 min-h-[95vh] w-full max-w-4xl px-6 py-12 md:gap-6 border-40 md:border-60"
       >
         {/* LOGO */}
         <LogoAnimado />
