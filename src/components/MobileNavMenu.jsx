@@ -1,29 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import {
-  FaHome,
-  FaUsers,
-  FaCrown,
-  FaGlobe,
-  FaBullhorn,
-  FaBriefcase,
-  FaTags,
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
-
-const NAV_ITEMS = [
-  { href: "#inicio", label: "Inicio", icon: FaHome },
-  { href: "#clientes", label: "Clientes", icon: FaUsers },
-  { href: "#excelencia", label: "Por Qué Elegirnos", icon: FaCrown },
-  { href: "#sitio-web", label: "Sitio Web", icon: FaGlobe },
-  { href: "#marketing", label: "Marketing", icon: FaBullhorn },
-  { href: "#proyectos", label: "Proyectos", icon: FaBriefcase },
-  { href: "#planes", label: "Planes", icon: FaTags },
-  { href: "#contacto", label: "Contacto", icon: FaEnvelope },
-];
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { NAV_ITEMS } from "../data/navItems";
 
 const SOCIAL_LINKS = [
   {
@@ -84,14 +62,22 @@ const MobileNavMenu = () => {
           </div>
 
           <nav className="flex-1 flex flex-col items-center justify-center gap-1 px-6 overflow-y-auto">
-            {NAV_ITEMS.map(({ href, label, icon: Icon }, index) => (
+            {NAV_ITEMS.map(({ href, label, icon: Icon, highlight }, index) => (
               <a
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
-                className="w-full max-w-xs flex items-center gap-3 font-serif uppercase tracking-[0.2em] text-base py-3.5 text-ps-white border-b border-ps-white/15 hover:text-ps-lblue transition-colors"
+                className={`w-full max-w-xs flex items-center gap-3 font-serif uppercase tracking-[0.2em] text-base py-3.5 border-b transition-colors ${
+                  highlight
+                    ? "text-ps-gold font-bold border-ps-gold/40 hover:text-ps-white"
+                    : "text-ps-white border-ps-white/15 hover:text-ps-lblue"
+                }`}
               >
-                <span className="shrink-0 w-6 font-bold text-ms text-ps-gold tracking-normal">
+                <span
+                  className={`shrink-0 w-6 font-bold text-ms tracking-normal ${
+                    highlight ? "text-ps-white" : "text-ps-gold"
+                  }`}
+                >
                   {String(index + 1)+")"}
                 </span>
                 <Icon className="w-4 h-4 shrink-0" />

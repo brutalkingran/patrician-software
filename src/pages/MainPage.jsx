@@ -10,6 +10,7 @@ import PlanPage from "./PlanPage";
 import WebsiteSection from "../components/WebsiteSection";
 import ProjectsSection from "../components/ProjectsSection";
 import MobileNavMenu from "../components/MobileNavMenu";
+import DesktopNavBar from "../components/DesktopNavBar";
 import MeetingPopup from "../components/MeetingPopup";
 
 const MainPage = () => {
@@ -25,6 +26,7 @@ const MainPage = () => {
       </Helmet>
 
       <MobileNavMenu />
+      <DesktopNavBar />
       <MeetingPopup />
 
       <main>
