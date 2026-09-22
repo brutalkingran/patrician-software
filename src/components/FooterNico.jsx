@@ -119,6 +119,7 @@ const Footer = () => {
           <div className="flex items-center">
             <img
               src="/logo_t.png"
+              loading="lazy"
               className="h-6 sm:h-7 w-auto object-contain transition-opacity duration-300"
               alt="Patrician Software Logo"
             />

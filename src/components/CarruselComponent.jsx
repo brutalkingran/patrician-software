@@ -109,6 +109,7 @@ const CarruselComponent = ({ images = [] }) => {
               muted
               loop
               playsInline
+              preload="metadata"
               className="w-full h-full object-cover pointer-events-none"
               // Restaurar el segundo donde se quedó
               onLoadedMetadata={(e) => {
@@ -125,6 +126,7 @@ const CarruselComponent = ({ images = [] }) => {
             <img
               src={currentItem}
               alt={`Trabajo realizado ${index + 1}`}
+              loading="lazy"
               className="w-full h-full object-cover pointer-events-none"
               onError={(e) => {
                 e.target.style.display = "none"

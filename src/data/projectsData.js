@@ -4,6 +4,8 @@ export const PROJECTS_DATA = [
     title: "Electro Hobby",
     category: "software",
     image: "/img/eh.png",
+    imageWidth: 1718,
+    imageHeight: 1010,
     url: "https://electrohobby.com.ar/",
     virtues: [
       { value: "Catálogo", label: "Soporte Idiomas" },
@@ -25,6 +27,8 @@ export const PROJECTS_DATA = [
     title: "Queen Bazar",
     category: "software",
     image: "/img/queen.png",
+    imageWidth: 1718,
+    imageHeight: 1010,
     url: "https://queen-regaleria.shop/",
     virtues: [
       { value: "e-Commerce", label: "Tienda de Puntos" },
@@ -46,6 +50,8 @@ export const PROJECTS_DATA = [
     title: "AirTotal",
     category: "software",
     image: "/img/air.png",
+    imageWidth: 1718,
+    imageHeight: 1010,
     url: "https://airtotal.shop/",
     virtues: [
       { value: "Tienda", label: "Gestión Inventario" },
@@ -67,6 +73,8 @@ export const PROJECTS_DATA = [
     title: "Campaña Electro Hobby",
     category: "marketing",
     image: "/img/eh.jpg",
+    imageWidth: 900,
+    imageHeight: 1600,
     url: null,
     virtues: [
       { value: "+25", label: "Clientes por Día" },
@@ -88,6 +96,8 @@ export const PROJECTS_DATA = [
     title: "Campaña Fandy",
     category: "marketing",
     image: "/img/fandy.jpg",
+    imageWidth: 864,
+    imageHeight: 1184,
     url: null,
     virtues: [
       { value: "5.4x", label: "Retorno ROAS" },
@@ -109,6 +119,8 @@ export const PROJECTS_DATA = [
     title: "Campaña Vértice Femenino",
     category: "marketing",
     image: "/img/vert.jpg",
+    imageWidth: 900,
+    imageHeight: 1600,
     url: null,
     virtues: [
       { value: "+40%", label: "Conversión Ventas" },
@@ -130,6 +142,8 @@ export const PROJECTS_DATA = [
     title: "Campaña Indusplast",
     category: "marketing",
     image: "/img/indus.jpeg",
+    imageWidth: 1080,
+    imageHeight: 1350,
     url: null,
     virtues: [
       { value: "Campaña", label: "Activa" },
@@ -151,6 +165,8 @@ export const PROJECTS_DATA = [
     title: "Patrician Stock - Gestor de Inventario (Próximamente)",
     category: "software",
     image: "/img/stock2.jpeg",
+    imageWidth: 763,
+    imageHeight: 1415,
     url: null,
     virtues: [
       { value: "Facturación", label: "Cotización Automática" },
@@ -172,6 +188,8 @@ export const PROJECTS_DATA = [
     title: "BudgetMaker - Presupuestador Automatizado (Próximamente)",
     category: "software",
     image: "/img/prep.png",
+    imageWidth: 414,
+    imageHeight: 846,
     url: null,
     virtues: [
       { value: "Rapidez", label: "Presupuestos PDF" },

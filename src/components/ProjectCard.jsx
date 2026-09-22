@@ -42,6 +42,7 @@ const ProjectCard = ({ project, onOpenDetail }) => {
           <img
             src={image}
             alt={title}
+            loading="lazy"
             className="
               w-[125%] h-[125%] -top-[12%] -left-[12%]
               object-cover

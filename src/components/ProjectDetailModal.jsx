@@ -60,6 +60,8 @@ const ProjectDetailModal = ({ project, onClose }) => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  width={project.imageWidth}
+                  height={project.imageHeight}
                   onLoad={checkOverflow}
                   className="w-full h-auto object-contain mx-auto"
                 />
@@ -115,7 +117,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute bottom-0 inset-x-0 flex flex-col items-center pt-10 pb-2 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"
+                  className="absolute bottom-0 inset-x-0 flex flex-col items-center pt-10 pb-2 bg-linear-to-t from-black/70 to-transparent pointer-events-none"
                 >
                   <span className="font-serif text-[0.65rem] uppercase tracking-[0.2em] text-ps-white/90">
                     Ver más
